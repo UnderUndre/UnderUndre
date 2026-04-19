@@ -6,21 +6,21 @@
 
 ## Fullstack & AI Platform Engineer
 
-Building multi-channel AI assistants, e-commerce platforms, and dev tooling.
-Full cycle: architecture → DB schemas → implementation → Docker deploy → CI/CD with OIDC.
+Строю multi-channel AI-ассистентов, e-commerce-платформы и dev-тулинг.
+Полный цикл: архитектура → схемы БД → реализация → Docker-деплой → CI/CD с OIDC.
 
 [![npm](https://img.shields.io/badge/npm-@underundre-CB3837?logo=npm&logoColor=white)](https://www.npmjs.com/org/underundre)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Salesforce](https://img.shields.io/badge/Salesforce-3×%20certified-00A1E0?logo=salesforce&logoColor=white)](#certifications)
+[![Salesforce](https://img.shields.io/badge/Salesforce-3×%20сертификации-00A1E0?logo=salesforce&logoColor=white)](#сертификации)
 [![Location](https://img.shields.io/badge/based%20in-Omsk%20%2F%20remote-4e007a)](#)
 
 </div>
 
 ---
 
-## Stack
+## Стек
 
-**Languages** &nbsp;
+**Языки** &nbsp;
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
@@ -86,7 +86,7 @@ Full cycle: architecture → DB schemas → implementation → Docker deploy →
 
 ---
 
-## Certifications
+## Сертификации
 
 <div align="center">
 
@@ -96,7 +96,7 @@ Full cycle: architecture → DB schemas → implementation → Docker deploy →
 
 </div>
 
-Salesforce Platform experience: declarative automation (Flow, Validation Rules, Approval Processes), security model (Profiles / Permission Sets / Sharing Rules), Apex (triggers, batch, async, governor limits), SOQL/SOSL optimization, Lightning Web Components, integrations via REST/Bulk API.
+Опыт на Salesforce Platform: декларативная автоматизация (Flow, Validation Rules, Approval Processes), security model (Profiles / Permission Sets / Sharing Rules), Apex (триггеры, batch, async, governor limits), оптимизация SOQL/SOSL, Lightning Web Components, интеграции через REST / Bulk API.
 
 ---
 
@@ -104,35 +104,35 @@ Salesforce Platform experience: declarative automation (Flow, Validation Rules, 
 
 ### Multi-channel AI platform
 
-**`ai-digital-twins`** — AI assistant platform for business. Telegram (Bot API + MTProto), VK, SMS, Email, Avito, Web Widget. Scenario mode, RAG on Qdrant, smart re-engagement, Human Handoff, CRM integrations (AmoCRM, BlueSales), Voximplant telephony, YooKassa billing.
+**`ai-digital-twins`** — платформа AI-ассистентов для бизнеса. Telegram (Bot API + MTProto), VK, SMS, Email, Avito, Web Widget. Scenario-режим, RAG на Qdrant, smart re-engagement, Human Handoff, CRM-интеграции (AmoCRM, BlueSales), Voximplant-телефония, YooKassa-биллинг.
 
 > `React 19` · `Express 5` · `PostgreSQL 16` · `Drizzle` · `Redis + BullMQ` · `Qdrant` · `Supercompat (Gemini/DeepSeek/OpenAI)`
 
 ### Multi-region commerce & infra
 
-**[UnderUndre/undrlla (opensource coming soon)](https://github.com/UnderUndre/undrlla)** — enterprise e-commerce: custom PC builder (compatibility engine: socket / RAM / GPU clearance), industrial VPN (WireGuard / AmneziaWG / Xray via SSH auto-provisioning), IT mentorship. Multi-region deployments (GLOBAL / RU), SSO (SAML), Stripe / PayPal / BTCPay / SHKeeper, Telegram bot, audit logs, webhooks.
+**[UnderUndre/undrlla (opensource coming soon)](https://github.com/UnderUndre/undrlla)** — enterprise e-commerce: кастомная сборка ПК (compatibility engine: socket / RAM / GPU clearance), industrial VPN (WireGuard / AmneziaWG / Xray через SSH-автопровиженинг), IT-менторство. Multi-region-деплои (GLOBAL / RU), SSO (SAML), Stripe / PayPal / BTCPay / SHKeeper, Telegram-бот, audit logs, webhooks.
 
 > `Next.js` · `Prisma` · `PostgreSQL` · `Traefik v3` · `Infisical (self-hosted)` · `GitHub Actions OIDC`
 
-### Open-source packages
+### Open-source пакеты
 
-| Repo | What it does |
+| Репо | Что делает |
 | --- | --- |
-| **[@underundre/undesign](https://www.npmjs.com/package/@underundre/undesign)** | Design tokens: Tailwind preset + DaisyUI themes + CSS vars + typed TS exports. |
-| **[@underundre/undev](https://github.com/UnderUndre/helpers)** | Shared configs (ESLint / TS / Prettier / commitlint) + bash scripts for deploy, backup, VPS bootstrap. |
-| **`clai-helpers`** | CLI that makes `.claude/` the source of truth and transpiles commands / agents / skills into Copilot and Gemini formats. 54 commands · 27 agents · 44 skills · 128 tests. |
+| **[@underundre/undesign](https://www.npmjs.com/package/@underundre/undesign)** | Design tokens: Tailwind preset + DaisyUI themes + CSS vars + typed TS-экспорты. |
+| **[@underundre/undev](https://github.com/UnderUndre/helpers)** | Шареные конфиги (ESLint / TS / Prettier / commitlint) + bash-скрипты деплоя, бэкапа, VPS-bootstrap. |
+| **`clai-helpers`** | CLI, который превращает `.claude/` в source of truth и транспилирует команды / агентов / скиллы в Copilot- и Gemini-форматы. 54 commands · 27 agents · 44 skills · 128 тестов. |
 
 ---
 
-## What I do
+## Что умею
 
-- Domain schema design, zero-downtime migrations, query optimization (Postgres + Prisma / Drizzle).
-- Multi-channel bots and integrations: Telegram (Bot + MTProto via Telethon), VK, SMS gateways, SMTP, Avito, webhooks.
-- LLM orchestration: provider fallback, semantic cache, RAG pipelines, instructor-style structured output, scenario-driven dialogs.
-- Payment infrastructure: Stripe / PayPal / BTCPay / SHKeeper / YooKassa, webhook idempotency, reconciliation.
-- Salesforce: org architecture, Flow automation, Apex triggers/batch, LWC, REST/Bulk API integrations, sharing & security design.
-- DevOps without "magic YAML": Docker Compose + Traefik, zero-downtime SSH deploy, Infisical with OIDC instead of static tokens, rollback strategies.
-- Engineering discipline: TDD, spec-driven workflow (SpecKit), Writer/Reviewer Claude loop, Zod validation at boundaries, structured logging.
+- Проектирование доменных схем БД, миграции без даунтайма, оптимизация запросов (Postgres + Prisma / Drizzle).
+- Многоканальные боты и интеграции: Telegram (Bot + MTProto через Telethon), VK, SMS-шлюзы, SMTP, Avito, webhooks.
+- LLM-оркестрация: fallback между провайдерами, semantic cache, RAG-пайплайны, instructor-style structured output, scenario-driven диалоги.
+- Платёжная инфраструктура: Stripe / PayPal / BTCPay / SHKeeper / YooKassa, webhook-идемпотентность, reconciliation.
+- Salesforce: архитектура орга, автоматизация на Flow, Apex-триггеры / batch, LWC, интеграции через REST / Bulk API, sharing & security design.
+- DevOps без «магических YAML»: Docker Compose + Traefik, zero-downtime SSH-деплой, Infisical с OIDC вместо статических токенов, rollback-стратегии.
+- Инженерная дисциплина: TDD, spec-driven workflow (SpecKit), Writer/Reviewer Claude-loop, Zod-валидация на границах, структурированные логи.
 
 ---
 
@@ -147,8 +147,8 @@ Salesforce Platform experience: declarative automation (Flow, Validation Rules, 
 
 ---
 
-## Contact
+## Контакты
 
-- GitHub Issues / Discussions on any of the projects above.
+- GitHub Issues / Discussions в любом из проектов выше.
 - npm: [@underundre](https://www.npmjs.com/org/underundre)
 - Social links: coming soon
