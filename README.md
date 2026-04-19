@@ -120,6 +120,8 @@ Salesforce Platform experience: declarative automation (Flow, Validation Rules, 
 | **[@underundre/undesign](https://www.npmjs.com/package/@underundre/undesign)** | Design tokens: Tailwind preset + DaisyUI themes + CSS vars + typed TS exports. |
 | **[@underundre/undev](https://github.com/UnderUndre/helpers)** | Shared configs (ESLint / TS / Prettier / commitlint) + bash scripts for deploy, backup, VPS bootstrap. |
 | **[@underundre/ai-helpers](https://github.com/UnderUndre/ai)** | CLI that makes `.claude/` the source of truth and transpiles commands / agents / skills into Copilot and Gemini formats. 54 commands · 27 agents · 44 skills · 128 tests. |
+| **[@underundre/underproxy](https://github.com/UnderUndre/ai)** | Self-hosted LLM proxy management UI + policy engine. Sits in front of LiteLLM: encrypted provider keys, model allow/deny rules, fallback chains with circuit-breaker health checks, cost tracking per provider/model, budgets, webhooks, API tokens. Express 4 · React 18 · Drizzle · Better Auth. |
+| **[@underundre/undrllai](https://github.com/UnderUndre/ai)** | Multi-model AI coding orchestrator. Pipeline engine (specify → review → plan → contracts → tasks) + ensemble engine — parallel execution across isolated git worktrees. Coordinates Claude Code, Gemini CLI, Copilot CLI, OpenCode, Qwen. Contract-first to prevent semantic conflicts. MCP server + React dashboard with SSE progress. |
 
 ---
 

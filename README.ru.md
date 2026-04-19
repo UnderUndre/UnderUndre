@@ -119,6 +119,8 @@
 | **[@underundre/undesign](https://www.npmjs.com/package/@underundre/undesign)** | Design tokens: Tailwind preset + DaisyUI themes + CSS vars + typed TS-экспорты. |
 | **[@underundre/undev](https://github.com/UnderUndre/helpers)** | Шареные конфиги (ESLint / TS / Prettier / commitlint) + bash-скрипты деплоя, бэкапа, VPS-bootstrap. |
 | **[@underundre/ai-helpers](https://github.com/UnderUndre/ai)** | CLI, который превращает `.claude/` в source of truth и транспилирует команды / агентов / скиллы в Copilot- и Gemini-форматы. 54 commands · 27 agents · 44 skills · 128 тестов. |
+| **[@underundre/underproxy](https://github.com/UnderUndre/ai)** | Self-hosted UI и policy-engine для LLM-прокси. Стоит перед LiteLLM: зашифрованное хранение ключей провайдеров, allow/deny-правила по моделям, fallback-цепочки с circuit-breaker health-чеками, трекинг стоимости по провайдеру/модели, бюджеты, вебхуки, API-токены. Express 4 · React 18 · Drizzle · Better Auth. |
+| **[@underundre/undrllai](https://github.com/UnderUndre/ai)** | Оркестратор для нескольких AI-кодогенераторов. Pipeline-движок (specify → review → plan → contracts → tasks) + ensemble-движок — параллельное исполнение в изолированных git-worktree. Координирует Claude Code, Gemini CLI, Copilot CLI, OpenCode, Qwen. Contract-first подход предотвращает семантические конфликты. MCP-сервер + React-дашборд с SSE-прогрессом. |
 
 ---
 
