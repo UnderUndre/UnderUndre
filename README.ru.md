@@ -12,8 +12,6 @@
 [![npm](https://img.shields.io/badge/npm-@underundre-CB3837?logo=npm&logoColor=white)](https://www.npmjs.com/org/underundre)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Salesforce](https://img.shields.io/badge/Salesforce-3×%20сертификации-00A1E0?logo=salesforce&logoColor=white)](#сертификации)
-[![Location](https://img.shields.io/badge/based%20in-Omsk%20%2F%20remote-4e007a)](#)
-
 </div>
 
 ---
@@ -120,7 +118,7 @@
 | --- | --- |
 | **[@underundre/undesign](https://www.npmjs.com/package/@underundre/undesign)** | Design tokens: Tailwind preset + DaisyUI themes + CSS vars + typed TS-экспорты. |
 | **[@underundre/undev](https://github.com/UnderUndre/helpers)** | Шареные конфиги (ESLint / TS / Prettier / commitlint) + bash-скрипты деплоя, бэкапа, VPS-bootstrap. |
-| **`clai-helpers`** | CLI, который превращает `.claude/` в source of truth и транспилирует команды / агентов / скиллы в Copilot- и Gemini-форматы. 54 commands · 27 agents · 44 skills · 128 тестов. |
+| **[@underundre/ai-helpers](https://github.com/UnderUndre/ai)** | CLI, который превращает `.claude/` в source of truth и транспилирует команды / агентов / скиллы в Copilot- и Gemini-форматы. 54 commands · 27 agents · 44 skills · 128 тестов. |
 
 ---
 

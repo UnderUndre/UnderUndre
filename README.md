@@ -12,7 +12,6 @@ Full cycle: architecture → DB schemas → implementation → Docker deploy →
 [![npm](https://img.shields.io/badge/npm-@underundre-CB3837?logo=npm&logoColor=white)](https://www.npmjs.com/org/underundre)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Salesforce](https://img.shields.io/badge/Salesforce-3×%20certified-00A1E0?logo=salesforce&logoColor=white)](#certifications)
-[![Location](https://img.shields.io/badge/based%20in-Omsk%20%2F%20remote-4e007a)](#)
 
 </div>
 
@@ -120,7 +119,7 @@ Salesforce Platform experience: declarative automation (Flow, Validation Rules, 
 | --- | --- |
 | **[@underundre/undesign](https://www.npmjs.com/package/@underundre/undesign)** | Design tokens: Tailwind preset + DaisyUI themes + CSS vars + typed TS exports. |
 | **[@underundre/undev](https://github.com/UnderUndre/helpers)** | Shared configs (ESLint / TS / Prettier / commitlint) + bash scripts for deploy, backup, VPS bootstrap. |
-| **`clai-helpers`** | CLI that makes `.claude/` the source of truth and transpiles commands / agents / skills into Copilot and Gemini formats. 54 commands · 27 agents · 44 skills · 128 tests. |
+| **[@underundre/ai-helpers](https://github.com/UnderUndre/ai)** | CLI that makes `.claude/` the source of truth and transpiles commands / agents / skills into Copilot and Gemini formats. 54 commands · 27 agents · 44 skills · 128 tests. |
 
 ---
 
