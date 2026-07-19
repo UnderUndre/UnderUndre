@@ -6,7 +6,7 @@
 
 ## Fullstack & AI Platform Engineer
 
-Building multi-channel AI assistants, e-commerce platforms, and dev tooling.
+Building e-commerce platforms and dev tooling.
 Full cycle: architecture → DB schemas → implementation → Docker deploy → CI/CD with OIDC.
 
 [![npm](https://img.shields.io/badge/npm-@underundre-CB3837?logo=npm&logoColor=white)](https://www.npmjs.com/org/underundre)
@@ -37,7 +37,7 @@ Full cycle: architecture → DB schemas → implementation → Docker deploy →
 ![DaisyUI](https://img.shields.io/badge/-DaisyUI-5A0EF8?logo=daisyui&logoColor=white)
 
 **Backend** &nbsp;
-![Node.js](https://img.shields.io/badge/-Node.js%2022-339933?logo=nodedotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/-Node.js%2020-339933?logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/-Express%205-000000?logo=express&logoColor=white)
 ![Zod](https://img.shields.io/badge/-Zod-3E67B1?logo=zod&logoColor=white)
 ![NextAuth](https://img.shields.io/badge/-NextAuth-000000?logo=nextdotjs&logoColor=white)
@@ -50,14 +50,6 @@ Full cycle: architecture → DB schemas → implementation → Docker deploy →
 ![Redis](https://img.shields.io/badge/-Redis-DC382D?logo=redis&logoColor=white)
 ![BullMQ](https://img.shields.io/badge/-BullMQ-EF4444)
 ![Qdrant](https://img.shields.io/badge/-Qdrant-DC244C?logo=qdrant&logoColor=white)
-
-**AI / LLM** &nbsp;
-![OpenAI](https://img.shields.io/badge/-OpenAI-412991?logo=openai&logoColor=white)
-![Gemini](https://img.shields.io/badge/-Gemini-4285F4?logo=googlegemini&logoColor=white)
-![DeepSeek](https://img.shields.io/badge/-DeepSeek-0A66C2)
-![Vercel AI SDK](https://img.shields.io/badge/-Vercel%20AI%20SDK-000000?logo=vercel&logoColor=white)
-![RAG](https://img.shields.io/badge/-RAG%20%2F%20Embeddings-7C3AED)
-![Whisper](https://img.shields.io/badge/-Whisper%20STT-74aa9c)
 
 **Salesforce** &nbsp;
 ![Salesforce Platform](https://img.shields.io/badge/-Salesforce%20Platform-00A1E0?logo=salesforce&logoColor=white)
@@ -101,27 +93,28 @@ Salesforce Platform experience: declarative automation (Flow, Validation Rules, 
 
 ## Current projects
 
-### Multi-channel AI platform
+### Headless E-commerce & Service Infrastructure
 
-**`ai-digital-twins`** — AI assistant platform for business. Telegram (Bot API + MTProto), VK, SMS, Email, Avito, Web Widget. Scenario mode, RAG on Qdrant, smart re-engagement, Human Handoff, CRM integrations (AmoCRM, BlueSales), Voximplant telephony, YooKassa billing.
+**[UnderUndre/undrlla](https://github.com/UnderUndre/undrlla)** — Directus-based metadata-driven e-commerce & marketplace engine (`undrlla-core`). Clean operator-deployable marketplace template with native RLS/FLS security policies and dynamic theme tokens from `@underundre/undesign`. Powers client 1-click marketplace deployments via `undevops` and serves as the foundation for the Undrlla flagship platform (`Undrlla.com`: $300k Mutual Aid Queue, P2P Barter, P2P Taxi, AI PC Builder, and rootless AmneziaWG VPN).
 
-> `React 19` · `Express 5` · `PostgreSQL 16` · `Drizzle` · `Redis + BullMQ` · `Qdrant` · `Supercompat (Gemini/DeepSeek/OpenAI)`
+> `Directus 12` · `Node.js` · `TypeScript` · `PostgreSQL` · `RLS/FLS` · `Stripe Connect` · `TON / SHKeeper` · `Next.js (undrllanding)` · `Telegram Mini App`
 
-### Multi-region commerce & infra
+**[UnderUndre/unet](https://github.com/UnderUndre/unet)** — Self-contained, rootless DPI-resistant VPN and tunneling engine built on native `amneziawg-go` with Google's `gVisor netstack` (`tun/netstack`). Operates 100% in user-space without root/admin privileges or host OS drivers. Exposes local SOCKS5/HTTP proxies (`127.0.0.1:1080`) and `yamux`-multiplexed reverse port forwarding.
 
-**[UnderUndre/undrlla (opensource coming soon)](https://github.com/UnderUndre/undrlla)** — enterprise e-commerce: custom PC builder (compatibility engine: socket / RAM / GPU clearance), industrial VPN (WireGuard / AmneziaWG / Xray via SSH auto-provisioning), IT mentorship. Multi-region deployments (GLOBAL / RU), SSO (SAML), Stripe / PayPal / BTCPay / SHKeeper, Telegram bot, audit logs, webhooks.
+> `Go 1.25+` · `amneziawg-go` · `gVisor netstack` · `yamux` · `AmneziaWG` · `Caddy`
 
-> `Next.js` · `Prisma` · `PostgreSQL` · `Traefik v3` · `Infisical (self-hosted)` · `GitHub Actions OIDC`
+**[UnderUndre/undevops](https://github.com/UnderUndre/undevops)** — AI-native PaaS deployment platform (Dokploy fork + MCP gateway). Features automated 1-click provisioning for `undrlla-core` client marketplaces (spawns Directus containers, applies `schema.snapshot.yaml`, injects `@underundre/undesign` themes, and manages Traefik ACME TLS).
+
+> `TypeScript` · `Docker Swarm` · `Traefik v3` · `Model Context Protocol (MCP)` · `Directus Provisioner`
 
 ### Open-source packages
 
-| Repo                                                                           | What it does                                                                                                                                                                                                                                                                                                                            |
-| ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **[@underundre/undesign](https://www.npmjs.com/package/@underundre/undesign)** | Design tokens: Tailwind preset + DaisyUI themes + CSS vars + typed TS exports.                                                                                                                                                                                                                                                          |
-| **[@underundre/undev](https://github.com/UnderUndre/helpers)**                 | Shared configs (ESLint / TS / Prettier / commitlint) + bash scripts for deploy, backup, VPS bootstrap.                                                                                                                                                                                                                                  |
-| **[@underundre/ai-helpers](https://github.com/UnderUndre/ai)**                 | CLI that makes `.claude/` the source of truth and transpiles commands / agents / skills into Copilot and Gemini formats. 54 commands · 27 agents · 44 skills · 128 tests.                                                                                                                                                               |
-| **[@underundre/underproxy](https://github.com/UnderUndre/ai)**                 | Self-hosted LLM proxy management UI + policy engine. Sits in front of LiteLLM: encrypted provider keys, model allow/deny rules, fallback chains with circuit-breaker health checks, cost tracking per provider/model, budgets, webhooks, API tokens. Express 4 · React 18 · Drizzle · Better Auth.                                      |
-| **[@underundre/undrllai](https://github.com/UnderUndre/ai)**                   | Multi-model AI coding orchestrator. Pipeline engine (specify → review → plan → contracts → tasks) + ensemble engine — parallel execution across isolated git worktrees. Coordinates Claude Code, Gemini CLI, Copilot CLI, OpenCode, Qwen. Contract-first to prevent semantic conflicts. MCP server + React dashboard with SSE progress. |
+| Repo | What it does |
+| --- | --- |
+| **[@underundre/undesign](https://www.npmjs.com/package/@underundre/undesign)** | Design tokens: Tailwind preset + DaisyUI themes + CSS vars + typed TS exports. Dynamic runtime theme engine for `undrllanding`. |
+| **[@underundre/undrllanding](https://github.com/UnderUndre/undrllanding)** | Storefront & Telegram Mini App frontend for `undrlla`. Next.js App Router, `@underundre/undesign` theme loading, Telegram WebApp `initData` auth, P2P Barter/Taxi boards, and Mutual Aid Queue UI. |
+| **[@underundre/unet](https://github.com/UnderUndre/unet)** | Self-contained rootless DPI-resistant VPN & tunnel engine (`amneziawg-go` + `gVisor netstack`). 0 root/admin dependencies, local SOCKS5/HTTP proxy, `yamux` reverse port forwarding. |
+| **[@underundre/under-ai-helpers](https://github.com/UnderUndre/under-ai-helpers)** | CLI that turns `.claude/` into the source of truth and transpiles commands / agents / skills into Copilot and Gemini formats. 54 commands · 27 agents · 44 skills · 128 tests. |
 
 ---
 
@@ -148,8 +141,11 @@ Salesforce Platform experience: declarative automation (Flow, Validation Rules, 
 
 ---
 
-## Contact
+## Contact & Socials
 
-- GitHub Issues / Discussions on any of the projects above.
-- npm: [@underundre](https://www.npmjs.com/org/underundre)
-- Social links: coming soon
+- **Telegram**: [@underundre](https://t.me/underundre)
+- **X (Twitter)**: [@underundre](https://x.com/underundre)
+- **YouTube**: [@underundre](https://youtube.com/@underundre)
+- **Reddit**: [u/underundre](https://reddit.com/user/underundre)
+- **npm**: [@underundre](https://www.npmjs.com/org/underundre)
+- **GitHub**: [Issues & Discussions](https://github.com/UnderUndre)

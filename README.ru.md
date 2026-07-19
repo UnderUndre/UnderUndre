@@ -51,14 +51,6 @@
 ![BullMQ](https://img.shields.io/badge/-BullMQ-EF4444)
 ![Qdrant](https://img.shields.io/badge/-Qdrant-DC244C?logo=qdrant&logoColor=white)
 
-**AI / LLM** &nbsp;
-![OpenAI](https://img.shields.io/badge/-OpenAI-412991?logo=openai&logoColor=white)
-![Gemini](https://img.shields.io/badge/-Gemini-4285F4?logo=googlegemini&logoColor=white)
-![DeepSeek](https://img.shields.io/badge/-DeepSeek-0A66C2)
-![Vercel AI SDK](https://img.shields.io/badge/-Vercel%20AI%20SDK-000000?logo=vercel&logoColor=white)
-![RAG](https://img.shields.io/badge/-RAG%20%2F%20Embeddings-7C3AED)
-![Whisper](https://img.shields.io/badge/-Whisper%20STT-74aa9c)
-
 **Salesforce** &nbsp;
 ![Salesforce Platform](https://img.shields.io/badge/-Salesforce%20Platform-00A1E0?logo=salesforce&logoColor=white)
 ![Apex](https://img.shields.io/badge/-Apex-00A1E0?logo=salesforce&logoColor=white)
