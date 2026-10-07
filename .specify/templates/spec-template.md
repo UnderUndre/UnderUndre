@@ -95,6 +95,17 @@
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
+### Security & Threat Mitigation (STRIDE) *(conditional)*
+
+> **Trigger**: Mandatory if feature adds/modifies network endpoints, auth/tokens, cryptography, or stores PII/sensitive data. For UI/Visual only: `STRIDE: N/A (Client UI/Styling only)`.
+
+- **Spoofing**: [Identity verification, token forgery prevention]
+- **Tampering**: [Payload integrity, signature validation, parameter tampering guards]
+- **Repudiation**: [Audit logging requirements, non-repudiation records]
+- **Information Disclosure**: [Data masking, encryption-at-rest/in-transit, PII protection]
+- **Denial of Service**: [Rate-limiting, resource quotas, bounded payload limits]
+- **Elevation of Privilege**: [RBAC/ABAC boundary enforcement, scope assertions]
+
 ### Key Entities *(include if feature involves data)*
 
 - **[Entity 1]**: [What it represents, key attributes without implementation]
