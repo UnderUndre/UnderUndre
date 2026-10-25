@@ -2,7 +2,7 @@
   "schema": 1,
   "toolVersion": "0.1.0",
   "source": {
-    "url": "github:UnderUndre/under-ai-helpers",
+    "url": "github:UnderUndre/UndeRoute",
     "ref": "latest",
     "commit": "dac807fba559096c86c3c860a69be4dc48cd39ea"
   },
