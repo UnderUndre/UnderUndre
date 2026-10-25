@@ -128,9 +128,8 @@
 ## Что умею
 
 - Проектирование доменных схем БД, миграции без даунтайма, оптимизация запросов (Postgres + Prisma / Drizzle).
-- Многоканальные боты и интеграции: Telegram (Bot + MTProto через Telethon), VK, SMS-шлюзы, SMTP, Avito, webhooks.
-- LLM-оркестрация: fallback между провайдерами, semantic cache, RAG-пайплайны, instructor-style structured output, scenario-driven диалоги.
-- Платёжная инфраструктура: Stripe / PayPal / BTCPay / SHKeeper / YooKassa, webhook-идемпотентность, reconciliation.
+- Многоканальные боты и интеграции: Telegram (Bot + MTProto через Telethon) SMTP, webhooks.
+- Платёжная инфраструктура: Stripe / PayPal / BTCPay webhook-идемпотентность, reconciliation.
 - Salesforce: архитектура орга, автоматизация на Flow, Apex-триггеры / batch, LWC, интеграции через REST / Bulk API, sharing & security design.
 - DevOps без «магических YAML»: Docker Compose + Traefik, zero-downtime SSH-деплой, Infisical с OIDC вместо статических токенов, rollback-стратегии.
 - Инженерная дисциплина: TDD, spec-driven workflow (SpecKit), Writer/Reviewer Claude-loop, Zod-валидация на границах, структурированные логи.

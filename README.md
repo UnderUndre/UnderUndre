@@ -128,9 +128,8 @@ Salesforce Platform experience: declarative automation (Flow, Validation Rules, 
 ## What I do
 
 - Domain schema design, zero-downtime migrations, query optimization (Postgres + Prisma / Drizzle).
-- Multi-channel bots and integrations: Telegram (Bot + MTProto via Telethon), VK, SMS gateways, SMTP, Avito, webhooks.
-- LLM orchestration: provider fallback, semantic cache, RAG pipelines, instructor-style structured output, scenario-driven dialogs.
-- Payment infrastructure: Stripe / PayPal / BTCPay / SHKeeper / YooKassa, webhook idempotency, reconciliation.
+- Multi-channel bots and integrations: Telegram (Bot + MTProto via Telethon), webhooks.
+- Payment infrastructure: Stripe / PayPal / BTCPay webhook idempotency, reconciliation.
 - Salesforce: org architecture, Flow automation, Apex triggers/batch, LWC, REST/Bulk API integrations, sharing & security design.
 - DevOps without "magic YAML": Docker Compose + Traefik, zero-downtime SSH deploy, Infisical with OIDC instead of static tokens, rollback strategies.
 - Engineering discipline: TDD, spec-driven workflow (SpecKit), Writer/Reviewer Claude loop, Zod validation at boundaries, structured logging.
