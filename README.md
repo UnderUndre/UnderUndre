@@ -23,6 +23,7 @@ Full cycle: architecture → DB schemas → implementation → Docker deploy →
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
+![Go](https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white)
 ![Apex](https://img.shields.io/badge/-Apex-00A1E0?logo=salesforce&logoColor=white)
 ![SQL](https://img.shields.io/badge/-SQL-336791?logo=postgresql&logoColor=white)
 ![Bash](https://img.shields.io/badge/-Bash-4EAA25?logo=gnubash&logoColor=white)
@@ -31,6 +32,7 @@ Full cycle: architecture → DB schemas → implementation → Docker deploy →
 ![React](https://img.shields.io/badge/-React%2019-61DAFB?logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=nextdotjs&logoColor=white)
 ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white)
+![VitePress](https://img.shields.io/badge/-VitePress-646CFF?logo=vite&logoColor=white)
 ![TanStack Query](https://img.shields.io/badge/-TanStack%20Query-FF4154?logo=reactquery&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/-Tailwind-38B2AC?logo=tailwindcss&logoColor=white)
 ![shadcn/ui](https://img.shields.io/badge/-shadcn%2Fui-000000?logo=shadcnui&logoColor=white)
@@ -93,19 +95,25 @@ Salesforce Platform experience: declarative automation (Flow, Validation Rules, 
 
 ## Current projects
 
-### Headless E-commerce & Service Infrastructure
+### underundre.com — Productized Engineering Bureau
 
-**[UnderUndre/undrlla](https://github.com/UnderUndre/undrlla)** — Directus-based metadata-driven e-commerce & marketplace engine (`undrlla-core`). Clean operator-deployable marketplace template with native RLS/FLS security policies and dynamic theme tokens from `@underundre/undesign`. Powers client 1-click marketplace deployments via `undevops` and serves as the foundation for the Undrlla flagship platform (`Undrlla.com`: $300k Mutual Aid Queue, P2P Barter, P2P Taxi, AI PC Builder, and rootless AmneziaWG VPN).
+**[UnderUndre](https://underundre.com) [undreseller](https://github.com/UnderUndre/undreseller)** — productized engineering & turnkey B2B systems bureau. Product ladder: **Workaround TCO Audit** (flat $350–$490, 24–48h TDABC-based audit of operational workarounds + architecture spec), **Sprint A** — self-hosted FOSS office stack (Twenty CRM / EspoCRM, Outline, Plane, Chatwoot, Cal.com; $3,500 + $500/mo), **Sprint B (hero)** — Service Booking & Professional Portfolio template ($4,900, 14-day timebox), plus a **Fork & Custom Development** line (Fork Tailored $6,800, Care retainers). Deals close via Upwork Direct Contracts (5%) or self-hosted DocuSeal e-sign.
 
-> `Directus 12` · `Node.js` · `TypeScript` · `PostgreSQL` · `RLS/FLS` · `Stripe Connect` · `TON / SHKeeper` · `Next.js (undrllanding)` · `Telegram Mini App`
+> `Next.js` · `TypeScript` · `Docker` · `Traefik v3` · `Trigger.dev / n8n` · `PostgreSQL` · `DocuSeal` · `Upwork Direct Contracts`
+
+### Undreading — Trilingual Publishing Platform
+
+**[Undreading](https://undreading.com) [undreading](https://github.com/UnderUndre/undreading)** — open international publishing platform and trust lead-magnet. Flagship monograph *"The Plumbing of Being"* (~500 pages, RU/EN/UA) reads free online via VitePress; print via Amazon KDP (EN/UA editions) and Lulu Print API DTC + Paddle MoR (RU edition); ZTA Architecture Kit bundled as a PWYW supporter product; contest track: Prix Pascal (FR distillation), Eric Hoffer Award & Next Generation Indie Book Awards (EN).
+
+> `VitePress` · `Pandoc` · `Typst` · `Amazon KDP` · `Lulu Print API` · `Paddle MoR` · `Cloudflare Pages`
 
 **[UnderUndre/unet](https://github.com/UnderUndre/unet)** — Self-contained, rootless DPI-resistant VPN and tunneling engine built on native `amneziawg-go` with Google's `gVisor netstack` (`tun/netstack`). Operates 100% in user-space without root/admin privileges or host OS drivers. Exposes local SOCKS5/HTTP proxies (`127.0.0.1:1080`) and `yamux`-multiplexed reverse port forwarding.
 
 > `Go 1.25+` · `amneziawg-go` · `gVisor netstack` · `yamux` · `AmneziaWG` · `Caddy`
 
-**[UnderUndre/undevops](https://github.com/UnderUndre/undevops)** — AI-native PaaS deployment platform (Dokploy fork + MCP gateway). Features automated 1-click provisioning for `undrlla-core` client marketplaces (spawns Directus containers, applies `schema.snapshot.yaml`, injects `@underundre/undesign` themes, and manages Traefik ACME TLS).
+**[UnderUndre/undevops](https://github.com/UnderUndre/undevops)** — AI-native PaaS deployment platform (Dokploy fork + MCP gateway).
 
-> `TypeScript` · `Docker Swarm` · `Traefik v3` · `Model Context Protocol (MCP)` · `Directus Provisioner`
+> `TypeScript` · `Docker Swarm` · `Traefik v3` · `Model Context Protocol (MCP)`
 
 ### Open-source packages
 
@@ -114,7 +122,6 @@ Salesforce Platform experience: declarative automation (Flow, Validation Rules, 
 | **[@underundre/undesign](https://www.npmjs.com/package/@underundre/undesign)** | Design tokens: Tailwind preset + DaisyUI themes + CSS vars + typed TS exports. Dynamic runtime theme engine for `undrllanding`. |
 | **[@underundre/undrllanding](https://github.com/UnderUndre/undrllanding)** | Storefront & Telegram Mini App frontend for `undrlla`. Next.js App Router, `@underundre/undesign` theme loading, Telegram WebApp `initData` auth, P2P Barter/Taxi boards, and Mutual Aid Queue UI. |
 | **[@underundre/unet](https://github.com/UnderUndre/unet)** | Self-contained rootless DPI-resistant VPN & tunnel engine (`amneziawg-go` + `gVisor netstack`). 0 root/admin dependencies, local SOCKS5/HTTP proxy, `yamux` reverse port forwarding. |
-| **[@underundre/under-ai-helpers](https://github.com/UnderUndre/under-ai-helpers)** | CLI that turns `.claude/` into the source of truth and transpiles commands / agents / skills into Copilot and Gemini formats. 54 commands · 27 agents · 44 skills · 128 tests. |
 
 ---
 

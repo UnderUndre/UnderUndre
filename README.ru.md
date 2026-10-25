@@ -6,7 +6,7 @@
 
 ## Fullstack & AI Platform Engineer
 
-Строю multi-channel AI-ассистентов, e-commerce-платформы и dev-тулинг.
+Строю e-commerce-платформы и dev-тулинг.
 Полный цикл: архитектура → схемы БД → реализация → Docker-деплой → CI/CD с OIDC.
 
 [![npm](https://img.shields.io/badge/npm-@underundre-CB3837?logo=npm&logoColor=white)](https://www.npmjs.com/org/underundre)
@@ -23,6 +23,7 @@
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
+![Go](https://img.shields.io/badge/-Go-00ADD8?logo=go&logoColor=white)
 ![Apex](https://img.shields.io/badge/-Apex-00A1E0?logo=salesforce&logoColor=white)
 ![SQL](https://img.shields.io/badge/-SQL-336791?logo=postgresql&logoColor=white)
 ![Bash](https://img.shields.io/badge/-Bash-4EAA25?logo=gnubash&logoColor=white)
@@ -31,13 +32,14 @@
 ![React](https://img.shields.io/badge/-React%2019-61DAFB?logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/-Next.js-000000?logo=nextdotjs&logoColor=white)
 ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white)
+![VitePress](https://img.shields.io/badge/-VitePress-646CFF?logo=vite&logoColor=white)
 ![TanStack Query](https://img.shields.io/badge/-TanStack%20Query-FF4154?logo=reactquery&logoColor=white)
 ![Tailwind](https://img.shields.io/badge/-Tailwind-38B2AC?logo=tailwindcss&logoColor=white)
 ![shadcn/ui](https://img.shields.io/badge/-shadcn%2Fui-000000?logo=shadcnui&logoColor=white)
 ![DaisyUI](https://img.shields.io/badge/-DaisyUI-5A0EF8?logo=daisyui&logoColor=white)
 
 **Backend** &nbsp;
-![Node.js](https://img.shields.io/badge/-Node.js%2022-339933?logo=nodedotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/-Node.js%2020-339933?logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/-Express%205-000000?logo=express&logoColor=white)
 ![Zod](https://img.shields.io/badge/-Zod-3E67B1?logo=zod&logoColor=white)
 ![NextAuth](https://img.shields.io/badge/-NextAuth-000000?logo=nextdotjs&logoColor=white)
@@ -82,8 +84,8 @@
 <div align="center">
 
 | [![Admin](https://img.shields.io/badge/Salesforce-Certified%20Administrator-00A1E0?logo=salesforce&logoColor=white)](https://www.salesforce.com/trailblazer/underundre) | [![Advanced Admin](https://img.shields.io/badge/Salesforce-Certified%20Advanced%20Administrator-00A1E0?logo=salesforce&logoColor=white)](https://www.salesforce.com/trailblazer/underundre) | [![PD I](https://img.shields.io/badge/Salesforce-Certified%20Platform%20Developer%20I-00A1E0?logo=salesforce&logoColor=white)](https://www.salesforce.com/trailblazer/underundre) |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                              Administrator                                                                              |                                                                                   Advanced Administrator                                                                                    |                                                                               Platform Developer I                                                                                |
+| :---: | :---: | :---: |
+| Administrator | Advanced Administrator | Platform Developer I |
 
 </div>
 
@@ -91,29 +93,35 @@
 
 ---
 
-## Current projects
+## Текущие проекты
 
-### Multi-channel AI platform
+### Undreseller — продуктовое инженерное бюро
 
-**`ai-digital-twins`** — платформа AI-ассистентов для бизнеса. Telegram (Bot API + MTProto), VK, SMS, Email, Avito, Web Widget. Scenario-режим, RAG на Qdrant, smart re-engagement, Human Handoff, CRM-интеграции (AmoCRM, BlueSales), Voximplant-телефония, YooKassa-биллинг.
+**[UnderUndre](https://underundre.com) [undreseller](https://github.com/UnderUndre/undreseller)** — бюро productized engineering и turnkey B2B-систем. Линейка продуктов: **Workaround TCO Audit** ($350–$490 fixed, аудит операционных костылей по TDABC за 24–48 ч + архитектурная спека), **Sprint A** — self-hosted FOSS office stack (Twenty CRM / EspoCRM, Outline, Plane, Chatwoot, Cal.com; $3,500 + $500/мес), **Sprint B (hero)** — шаблон Service Booking & Professional Portfolio ($4,900, таймбокс 14 дней), плюс линейка **Fork & Custom Development** (Fork Tailored $6,800, Care-ретейнеры). Сделки закрываются через Upwork Direct Contracts (5%) или self-hosted DocuSeal e-sign.
 
-> `React 19` · `Express 5` · `PostgreSQL 16` · `Drizzle` · `Redis + BullMQ` · `Qdrant` · `Supercompat (Gemini/DeepSeek/OpenAI)`
+> `Next.js` · `TypeScript` · `Docker` · `Traefik v3` · `Trigger.dev / n8n` · `PostgreSQL` · `DocuSeal` · `Upwork Direct Contracts`
 
-### Multi-region commerce & infra
+### Undreading — трилингвальная издательская платформа
 
-**[UnderUndre/undrlla (opensource coming soon)](https://github.com/UnderUndre/undrlla)** — enterprise e-commerce: кастомная сборка ПК (compatibility engine: socket / RAM / GPU clearance), industrial VPN (WireGuard / AmneziaWG / Xray через SSH-автопровиженинг), IT-менторство. Multi-region-деплои (GLOBAL / RU), SSO (SAML), Stripe / PayPal / BTCPay / SHKeeper, Telegram-бот, audit logs, webhooks.
+**[Undreading](https://undreading.com) [undreading](https://github.com/UnderUndre/undreading)** — открытая международная издательская платформа и лидогенератор доверия. Флагманская монография *«Сантехника бытия»* (~500 стр., RU/EN/UK) читается бесплатно онлайн (VitePress); печать — Amazon KDP (EN/UK) и Lulu Print API DTC + Paddle MoR (RU); в бандл входит ZTA Architecture Kit (PWYW); конкурсный контур: Prix Pascal (FR-дистиллят), Eric Hoffer Award и Next Generation Indie Book Awards (EN).
 
-> `Next.js` · `Prisma` · `PostgreSQL` · `Traefik v3` · `Infisical (self-hosted)` · `GitHub Actions OIDC`
+> `VitePress` · `Pandoc` · `Typst` · `Amazon KDP` · `Lulu Print API` · `Paddle MoR` · `Cloudflare Pages`
+
+**[UnderUndre/unet](https://github.com/UnderUndre/unet)** — самодостаточный rootless DPI-устойчивый VPN и туннельный движок на нативном `amneziawg-go` с `gVisor netstack` (`tun/netstack`) от Google. Работает на 100% в user-space — без root/admin-прав и драйверов хостовой ОС. Отдаёт локальные SOCKS5/HTTP-прокси (`127.0.0.1:1080`) и `yamux`-мультиплексированный reverse port forwarding.
+
+> `Go 1.25+` · `amneziawg-go` · `gVisor netstack` · `yamux` · `AmneziaWG` · `Caddy`
+
+**[UnderUndre/undevops](https://github.com/UnderUndre/undevops)** — AI-native PaaS-платформа деплоя (форк Dokploy + MCP gateway).
+
+> `TypeScript` · `Docker Swarm` · `Traefik v3` · `Model Context Protocol (MCP)`
 
 ### Open-source пакеты
 
-| Репо                                                                           | Что делает                                                                                                                                                                                                                                                                                                                                                          |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **[@underundre/undesign](https://www.npmjs.com/package/@underundre/undesign)** | Design tokens: Tailwind preset + DaisyUI themes + CSS vars + typed TS-экспорты.                                                                                                                                                                                                                                                                                     |
-| **[@underundre/undev](https://github.com/UnderUndre/helpers)**                 | Шареные конфиги (ESLint / TS / Prettier / commitlint) + bash-скрипты деплоя, бэкапа, VPS-bootstrap.                                                                                                                                                                                                                                                                 |
-| **[@underundre/ai-helpers](https://github.com/UnderUndre/ai)**                 | CLI, который превращает `.claude/` в source of truth и транспилирует команды / агентов / скиллы в Copilot- и Gemini-форматы. 54 commands · 27 agents · 44 skills · 128 тестов.                                                                                                                                                                                      |
-| **[@underundre/underproxy](https://github.com/UnderUndre/ai)**                 | Self-hosted UI и policy-engine для LLM-прокси. Стоит перед LiteLLM: зашифрованное хранение ключей провайдеров, allow/deny-правила по моделям, fallback-цепочки с circuit-breaker health-чеками, трекинг стоимости по провайдеру/модели, бюджеты, вебхуки, API-токены. Express 4 · React 18 · Drizzle · Better Auth.                                                 |
-| **[@underundre/undrllai](https://github.com/UnderUndre/ai)**                   | Оркестратор для нескольких AI-кодогенераторов. Pipeline-движок (specify → review → plan → contracts → tasks) + ensemble-движок — параллельное исполнение в изолированных git-worktree. Координирует Claude Code, Gemini CLI, Copilot CLI, OpenCode, Qwen. Contract-first подход предотвращает семантические конфликты. MCP-сервер + React-дашборд с SSE-прогрессом. |
+| Репо | Что делает |
+| --- | --- |
+| **[@underundre/undesign](https://www.npmjs.com/package/@underundre/undesign)** | Design tokens: Tailwind preset + DaisyUI themes + CSS vars + типизированные TS-экспорты. Динамический runtime theme engine для `undrllanding`. |
+| **[@underundre/undrllanding](https://github.com/UnderUndre/undrllanding)** | Storefront и Telegram Mini App фронтенд для `undrlla`. Next.js App Router, загрузка тем `@underundre/undesign`, Telegram WebApp `initData` auth, P2P Barter/Taxi борды и Mutual Aid Queue UI. |
+| **[@underundre/unet](https://github.com/UnderUndre/unet)** | Самодостаточный rootless DPI-устойчивый VPN и туннельный движок (`amneziawg-go` + `gVisor netstack`). 0 root/admin-зависимостей, локальный SOCKS5/HTTP-прокси, `yamux` reverse port forwarding. |
 
 ---
 
@@ -142,6 +150,9 @@
 
 ## Контакты
 
-- GitHub Issues / Discussions в любом из проектов выше.
-- npm: [@underundre](https://www.npmjs.com/org/underundre)
-- Social links: coming soon
+- **Telegram**: [@underundre](https://t.me/underundre)
+- **X (Twitter)**: [@underundre](https://x.com/underundre)
+- **YouTube**: [@underundre](https://youtube.com/@underundre)
+- **Reddit**: [u/underundre](https://reddit.com/user/underundre)
+- **npm**: [@underundre](https://www.npmjs.com/org/underundre)
+- **GitHub**: [Issues & Discussions](https://github.com/UnderUndre)
