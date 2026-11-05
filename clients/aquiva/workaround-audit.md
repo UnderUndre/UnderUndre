@@ -11,7 +11,7 @@
 
 ## 0. Why you received this audit
 
-I am Andrei, founder of underundre.com — a one-person productized engineering bureau that quantifies operational friction in service businesses. I prepared this pre-interview discovery memo for Aquiva Labs from public data only — before any engagement, no vendor pitch involved.
+I am Andrei, founder of underundre.com — a one-person productized engineering bureau that quantifies operational friction in service businesses. I prepared this pre-interview discovery memo for Aquiva Labs from public data only — before any engagement, no vendor pitch or any internal data involved.
 
 ### What caught my attention
 
