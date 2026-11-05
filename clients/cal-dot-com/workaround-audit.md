@@ -48,22 +48,16 @@ Retrospective source attribution on the last 20 closed Enterprise Organizations 
 
 ## 1. Epistemic Horizon & Stakeholder Alignment
 
-- **Economic Buyer (P&L Owner):** Peer Richelsen & Bailey Pumfleet (Co-founders & Co-CEOs).
-  - *Signing Authority Status (Gate 1):* `(b) Partner consensus / Board approval required [AUTHORITY UNVERIFIED]`. Discretionary authorization limit ($\ge \$5,000$) is governed by Delaware C-Corp bylaws and not publicly disclosed. Level 3 (Build) is locked pending in-person verification.
+- **Economic Buyer (P&L Owner):** Peer Richelsen & Bailey Pumfleet (Co-founders & Co-CEOs). *Signing Authority Status (Gate 1):* `(b) Partner consensus / Board approval required [AUTHORITY UNVERIFIED]`. Discretionary authorization limit (≥ \5,000$) is governed by Delaware C-Corp bylaws and not publicly disclosed. Level 3 (Build) is locked pending in-person verification.
 - **Process Sponsor:** Keith Williams (Head of Engineering). Direct accountability for core throughput, CI/CD health, and release stability of the private enterprise monorepo.
 - **JTBD Trigger Catalyst (90-Day Push / Gate 9):** Institutional codebase bifurcation on April 15, 2026 — migration of production code to a private repository and release of the stripped-down `calcom/cal.diy` (MIT) with Enterprise modules excised (Teams, Orgs, SAML/SSO, Workflows). This induced operational turbulence in the tracker and made the core unit economics question urgent: does the public fork justify its maintenance overhead?
-- **Observed Vector of Investment (OSINT Evidence, L4):**
-  - Public hiring of Senior Product Designer ($100k–$150k) and Enterprise Fullstack Engineers confirms revealed resource allocation: capital is concentrated on commercial productization of complex B2B features (Organizations, Routing Forms, SSO).
-  - The `cal.com/open` portal confirms macro-observability (salary bands, headcount ~40–44 FTE, commit velocity).
+- **Observed Vector of Investment (OSINT Evidence, L4):**; Public hiring of Senior Product Designer (100k–150k USD) and Enterprise Fullstack Engineers confirms revealed resource allocation: capital is concentrated on commercial productization of complex B2B features (Organizations, Routing Forms, SSO). The `cal.com/open` portal confirms macro-observability (salary bands, headcount ~40–44 FTE, commit velocity).
 - **Master System of Record (Gate 4):** GitHub Enterprise + Linear + Stripe Billing + PostgreSQL.
-- **Economic Scale Status (Gate 8):** `Band (d): $5M+/yr (ARR ~$5.1M, OpEx >$250k/mo)`. Baseline loaded rate for Senior SWE: **$75–$110/hr**.
+- **Economic Scale Status (Gate 8):** `Band (d): $5M+/yr (ARR ~$5.1M, OpEx >$250k/mo)`. Baseline loaded rate for Senior SWE: **75–110 USD/hr**.
 - **Observability Status:** `MACRO_OBSERVABLE / TIER_ATTRIBUTION_UNVERIFIED`. Macro metrics are transparent, but granular telemetry is absent: the company lacks time-tracking telemetry linking senior engineering hours to client tiers.
-- **Change Capacity Score (1–5 / Gate 3):** `NOT_VERIFIED [ESTIMATED_RANGE: 2–4, HYPOTHESIS]`.
-  - Deployment velocity is high (thousands of commits, rapid architectural pivot to closed-source core). However, team behavioral adherence to strict ticket-filtering SOPs requires interview calibration.
-- **Political Sabotage & Friction Vectors:**
-  - *Who loses leverage if the tracker is gated?* DevRel and community managers whose KPIs tie to GitHub stars and vanity open-source metrics; founders whose personal brand relies on a 100% "Open Startup" ethos.
-- **Primary Business Bottleneck (Goldratt TOC / Gate 2):** `HYPOTHESIS: CONVERSION_PLUMBING & FULFILLMENT OVERFLOW (IN_SCOPE)`.
-  - Requires ruling out a commercial top-of-funnel collapse (Demand Generation Collapse).
+- **Change Capacity Score (1–5 / Gate 3):** `NOT_VERIFIED [ESTIMATED_RANGE: 2–4, HYPOTHESIS]`. Deployment velocity is high (thousands of commits, rapid architectural pivot to closed-source core). However, team behavioral adherence to strict ticket-filtering SOPs requires interview calibration.
+- **Political Sabotage & Friction Vectors:**; *Who loses leverage if the tracker is gated?* DevRel and community managers whose KPIs tie to GitHub stars and vanity open-source metrics; founders whose personal brand relies on a 100% "Open Startup" ethos.
+- **Primary Business Bottleneck (Goldratt TOC / Gate 2):** `HYPOTHESIS: CONVERSION_PLUMBING & FULFILLMENT OVERFLOW (IN_SCOPE)`. Requires ruling out a commercial top-of-funnel collapse (Demand Generation Collapse).
 
 ---
 
@@ -89,14 +83,12 @@ Retrospective source attribution on the last 20 closed Enterprise Organizations 
 
 ### Leading Hypothesis Tree
 
-- **Core Hypothesis:** `Cost Attribution Debt in Open-Core Architecture`
-  - *Sub-Hypothesis A (Support Spillover):* Core engineers unintentionally spend high-loaded hours ($90/hr) triaging and debugging non-revenue `cal.diy` community bugs.
-  - *Sub-Hypothesis B (Conversion Blindspot):* The company lacks end-to-end attribution linking a `cal.diy` fork user to a closed-won Enterprise Organizations contract ($28/user/mo).
+- **Core Hypothesis:** `Cost Attribution Debt in Open-Core Architecture`; *Sub-Hypothesis A (Support Spillover):* Core engineers unintentionally spend high-loaded hours ($90/hr) triaging and debugging non-revenue `cal.diy` community bugs. *Sub-Hypothesis B (Conversion Blindspot):* The company lacks end-to-end attribution linking a `cal.diy` fork user to a closed-won Enterprise Organizations contract ($28/user/mo).
 
 | Friction Point / Observation | Direction Conf. (Existence) | Magnitude Conf. (Scale) | Primary Evidence (Level L1–L5) | Epistemic Blindspot (Required Telemetry) |
 | :--- | :---: | :---: | :--- | :--- |
 | **Open-Core Community Drag** | **60%** (Capped) | **15%** | L4 (OSINT: ~50k stars, 16k forks, 1.2k issues) + L5 (Code bifurcation announcement) | Linear/GitHub export: `User -> Issue ID -> Customer Tier (Free vs Paid)`. |
-| **Context-Switching Tax ($K \ge 2$)** | **50%** | **10%** | L4 (Dual-repo architecture: private core vs `cal.diy` fork) | Anonymized time-tracking CSV or git activity logs with commit time deltas `[ID NOT FOUND]`. |
+| **Context-Switching Tax (K ≥ 2)** | **50%** | **10%** | L4 (Dual-repo architecture: private core vs `cal.diy` fork) | Anonymized time-tracking CSV or git activity logs with commit time deltas `[ID NOT FOUND]`. |
 | **Open-Core Conversion Visibility Gap** | **60%** (Capped) | **0%** | L4 (Absence of public cohort conversion funnels on `cal.com/open`) | End-to-end pipeline: `Telemetry ID / Domain Hash -> Closed Won Enterprise Deals`. |
 | **License & Encryption Key Debugging** (Issue #26610) | **95%** | **40%** | L1 (Fix commit in `deployments.service.ts`) + L1 (Issue #26610) | Support ticket logs showing HTTP 401 errors from paid enterprise accounts. |
 
@@ -109,12 +101,12 @@ Retrospective source attribution on the last 20 closed Enterprise Organizations 
 3. **Alt 2 (Licensing & Architecture Clashes):** Divergence between the private monorepo and public code causes persistent sync failures and license validation bugs.
 4. **Alt 3 (Integration Delivery Friction):** The primary constraint is not community noise, but asynchronous external calendar race conditions (Google/Microsoft Graph APIs) in `EventManager.ts` (Issue #28705).
 5. **Alt 4 (Scope / Support Spillover):** Enterprise accounts demand custom integration changes disguised as standard warranty support.
-6. **Alt 5 (Null Hypothesis — $H_0$):** Operational pipelines and issue triage operate within acceptable industrial margins; open-source overhead is minimal, absorbed asynchronously, and does not degrade margins; no intervention required.
+6. **Alt 5 (Null Hypothesis — H₀):** Operational pipelines and issue triage operate within acceptable industrial margins; open-source overhead is minimal, absorbed asynchronously, and does not degrade margins; no intervention required.
 
 ### Required Disconfirming Evidence Search
 >
 > *Active search to disprove the leading hypothesis (Cost Attribution Debt):*  
-> The auditor must inspect the origination source of the last 20 closed Enterprise deals. If $\ge 50\%$ originated directly from self-hosted `cal.diy` setups, and Linear logs show core SWEs spend $<5\%$ of sprint capacity on the public repository, the leading hypothesis is **falsified**. In that scenario, open-source support is an ultra-efficient acquisition engine (CAC), not an operational leak.
+> The auditor must inspect the origination source of the last 20 closed Enterprise deals. If ≥ 50% originated directly from self-hosted `cal.diy` setups, and Linear logs show core SWEs spend <5% of sprint capacity on the public repository, the leading hypothesis is **falsified**. In that scenario, open-source support is an ultra-efficient acquisition engine (CAC), not an operational leak.
 
 ### Popperian Falsification Criteria
 >
@@ -125,17 +117,17 @@ Retrospective source attribution on the last 20 closed Enterprise Organizations 
 
 ## 3. Cost of Workaround & Friction Ledger (Calibration Model)
 
-> ⚠️ **EPISTEMIC DISCLAIMER:** This ledger is a **calibrated heuristic stress-test** based on verified organizational scale (Gate 8: Band d, loaded rate $75–$90/hr) and observed signals. Without direct database extracts, these figures DO NOT constitute audited financial data.
+> ⚠️ **EPISTEMIC DISCLAIMER:** This ledger is a **calibrated heuristic stress-test** based on verified organizational scale (Gate 8: Band d, loaded rate 75–90 USD/hr) and observed signals. Without direct database extracts, these figures DO NOT constitute audited financial data.
 
-$$\text{CoW}_{\text{Lite}} = C_{\text{FTE}} + C_{\text{SaaS}} + C_{\text{Scrap}}$$
-$$\text{where } C_{\text{FTE}} = \sum (\text{Reported Hours} \times W_{\text{evidence}} \times \text{Loaded Rate} \times 52)$$
+**CoW(Lite) = C(FTE) + C(SaaS) + C(Scrap)**
+**where C(FTE) = Σ (Reported Hours × W(evidence) × Loaded Rate × 52)**
 
 | Friction Point / Observed Cost Signal | Reported Volume | Evidence Level | Weight ($W$) | Loaded Rate | Stress-Test CoW | Epistemic Class |
 | :--- | :--- | :--- | :---: | :--- | :--- | :--- |
 | **Self-Hosted License Validation Failures** (Issue #26610) | 10 hrs/wk (Model) | Level 1 (Issues/PR) | **1.0** | $75 / hr | `[UNVERIFIED]` | `[MODEL_PENDING_TELEMETRY]` |
-| **Redundant Tool Sprawl ($C_{\text{SaaS}}$)** (Linear + Intercom + Zendesk) | Duplicate seats | Level 1 (Invoices) | **1.0** | Flat Fee | `[UNVERIFIED]` | `[PENDING_INVOICE_AUDIT]` |
+| **Redundant Tool Sprawl (C_{SaaS)** (Linear + Intercom + Zendesk) | Duplicate seats | Level 1 (Invoices) | **1.0** | Flat Fee | `[UNVERIFIED]` | `[PENDING_INVOICE_AUDIT]` |
 | **Support Escalation Spillover** (Core SWEs in public tracker) | Unverified | Level 4 (OSINT/Issues) | **0.3** | $90 / hr | `[UNVERIFIED]` | `[HEURISTIC_OSINT]` |
-| **Context Switching Tax ($K \ge 2$)** | 20–40% focus penalty | Level 4 (Model) | **0.3** | $90 / hr | `[UNVERIFIED]` | `[HEURISTIC: WEINBERG_MODEL]` |
+| **Context Switching Tax (K ≥ 2)** | 20–40% focus penalty | Level 4 (Model) | **0.3** | $90 / hr | `[UNVERIFIED]` | `[HEURISTIC: WEINBERG_MODEL]` |
 | **TOTAL CONFIRMED FLOOR (HARD FLOOR):** | — | — | — | — | **IDENTIFIER_NOT_FOUND** | `[NO_SYNTHETIC_PRECISION]` |
 
 *Auditor Ruling on Financials:* Publishing synthetic dollar totals prior to accessing primary telemetry is strictly prohibited. Observed operational cost signals are `PRESENT`, but the exact financial damage remains legally and mathematically unproven.
@@ -162,11 +154,8 @@ $$\text{where } C_{\text{FTE}} = \sum (\text{Reported Hours} \times W_{\text{evi
 
 ## 5. The Hierarchy of Interventions (Traversal Gate)
 
-- **Reversibility Rating (Bezos Type 1 vs Type 2):** `HIGH (Two-Way Door)`.
-  - Adjusting or reverting issue-gating policies on GitHub takes under 15 minutes in repository settings. High reversibility permits action at $\ge 60\%$ confidence.
-- **Implementation Blindfold Check:**
-  - *Query:* Would the bureau recommend this audit and these protocols if legally barred from selling implementation services?
-  - *Result:* **`PASS (Unbiased)`**. The bureau offers no custom development here; the core deliverable is an analytical stress-test for $490 and $0 CAPEX operational SOPs.
+- **Reversibility Rating (Bezos Type 1 vs Type 2):** `HIGH (Two-Way Door)`. Adjusting or reverting issue-gating policies on GitHub takes under 15 minutes in repository settings. High reversibility permits action at ≥ 60% confidence.
+- **Implementation Blindfold Check:**; *Query:* Would the bureau recommend this audit and these protocols if legally barred from selling implementation services?; *Result:* **`PASS (Unbiased)`**. The bureau offers no custom development here; the core deliverable is an analytical stress-test for $490 and $0 CAPEX operational SOPs.
 
 ### Level 0: Do Nothing (Status Quo)
 
@@ -189,7 +178,7 @@ $$\text{where } C_{\text{FTE}} = \sum (\text{Reported Hours} \times W_{\text{evi
 ### Level 3: Deploy Sovereign Bypass (Custom Build)
 
 - **Verdict:** `DEFERRED_PENDING_ATTRIBUTION_ANALYSIS`.
-- **Economic Rationale:** Custom software development cannot be justified at the discovery phase (`NOT_EVALUABLE_AT_DISCOVERY_STAGE`). Custom tooling requires proven SaaS exhaustion and Change Capacity $\ge 4$.
+- **Economic Rationale:** Custom software development cannot be justified at the discovery phase (`NOT_EVALUABLE_AT_DISCOVERY_STAGE`). Custom tooling requires proven SaaS exhaustion and Change Capacity ≥ 4.
 
 ---
 

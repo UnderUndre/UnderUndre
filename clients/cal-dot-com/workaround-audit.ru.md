@@ -48,22 +48,16 @@
 
 ## 1. Epistemic Horizon & Stakeholder Alignment
 
-- **Economic Buyer (P&L Owner):** Peer Richelsen & Bailey Pumfleet (Co-founders & Co-CEOs).
-  - *Статус права подписи (Gate 1):* `(b) Partner consensus / Board approval required [AUTHORITY UNVERIFIED]`. Лимит единоличной финансовой авторизации ($5,000+) закрыт соглашением акционеров Delaware C-Corp. Уровень Level 3 (Build) заблокирован до личной верификации полномочий.
+- **Economic Buyer (P&L Owner):** Peer Richelsen & Bailey Pumfleet (Co-founders & Co-CEOs). *Статус права подписи (Gate 1):* `(b) Partner consensus / Board approval required [AUTHORITY UNVERIFIED]`. Лимит единоличной финансовой авторизации ($5,000+) закрыт соглашением акционеров Delaware C-Corp. Уровень Level 3 (Build) заблокирован до личной верификации полномочий.
 - **Process Sponsor:** Keith Williams (Head of Engineering). Несёт прямую ответственность за пропускную способность ядра, CI/CD и стабильность закрытого монорепозитория.
 - **JTBD Trigger Catalyst (90-Day Push / Gate 9):** Институциональный раскол 15 апреля 2026 года — вывод production-кода в приватный репозиторий и выпуск урезанного `calcom/cal.diy` (MIT) с удалением Enterprise-модулей (Teams, Orgs, SAML/SSO, Workflows). Это создало операционную турбулентность в трекере и сделало критическим вопрос: окупает ли открытый форк затраты на его сопровождение?
-- **Observed Vector of Investment (OSINT Evidence, L4):**
-  - Публичный наём Senior Product Designer ($100k–$150k) и Enterprise Fullstack инженеров фиксирует доказанный вектор распределения ресурсов (Revealed Preference): капитал заливается в коммерческую упаковку сложных B2B-фичей (Organizations, Routing Forms, SSO).
-  - Дашборд `cal.com/open` подтверждает макро-наблюдаемость (зарплатные сетки, headcount ~40–44 FTE, динамика коммитов).
+- **Observed Vector of Investment (OSINT Evidence, L4):**; Публичный наём Senior Product Designer (100k–150k USD) и Enterprise Fullstack инженеров фиксирует доказанный вектор распределения ресурсов (Revealed Preference): капитал заливается в коммерческую упаковку сложных B2B-фичей (Organizations, Routing Forms, SSO). Дашборд `cal.com/open` подтверждает макро-наблюдаемость (зарплатные сетки, headcount ~40–44 FTE, динамика коммитов).
 - **Master System of Record (Gate 4):** GitHub Enterprise + Linear + Stripe Billing + PostgreSQL.
-- **Economic Scale Status (Gate 8):** `Band (d): $5M+/yr (ARR ~$5.1M, OpEx >$250k/mo)`. Базовая расчётная ставка loaded rate для Senior SWE: **$75–$110/час**.
+- **Economic Scale Status (Gate 8):** `Band (d): $5M+/yr (ARR ~$5.1M, OpEx >$250k/mo)`. Базовая расчётная ставка loaded rate для Senior SWE: **75–110 USD/час**.
 - **Observability Status:** `MACRO_OBSERVABLE / TIER_ATTRIBUTION_UNVERIFIED`. Макро-метрики открыты, но отсутствует сквозная потикетная трассировка: компания не имеет данных о распределении часов сеньор-разработчиков между платными клиентами и открытым комьюнити.
-- **Change Capacity Score (1–5 / Gate 3):** `NOT_VERIFIED [ESTIMATED_RANGE: 2–4, HYPOTHESIS]`.
-  - Скорость поставки кода экстремальная (тысячи коммитов, мгновенная перестройка архитектуры под закрытую модель). Однако поведенческая готовность команды к административным регламентам фильтрации тикетов требует проверки на интервью.
-- **Political Sabotage & Friction Vectors:**
-  - *Кто теряет влияние при шлюзовании трекера?* DevRel и комьюнити-менеджеры, чей KPI завязан на открытость проекта и звёзды на GitHub; фаундеры, чей персональный бренд построен на философии 100% Open Startup.
-- **Primary Business Bottleneck (Goldratt TOC / Gate 2):** `HYPOTHESIS: CONVERSION_PLUMBING & FULFILLMENT OVERFLOW (IN_SCOPE)`.
-  - Требует исключения сценария коммерческого тупика (Demand Collapse).
+- **Change Capacity Score (1–5 / Gate 3):** `NOT_VERIFIED [ESTIMATED_RANGE: 2–4, HYPOTHESIS]`. Скорость поставки кода экстремальная (тысячи коммитов, мгновенная перестройка архитектуры под закрытую модель). Однако поведенческая готовность команды к административным регламентам фильтрации тикетов требует проверки на интервью.
+- **Political Sabotage & Friction Vectors:**; *Кто теряет влияние при шлюзовании трекера?* DevRel и комьюнити-менеджеры, чей KPI завязан на открытость проекта и звёзды на GitHub; фаундеры, чей персональный бренд построен на философии 100% Open Startup.
+- **Primary Business Bottleneck (Goldratt TOC / Gate 2):** `HYPOTHESIS: CONVERSION_PLUMBING & FULFILLMENT OVERFLOW (IN_SCOPE)`. Требует исключения сценария коммерческого тупика (Demand Collapse).
 
 ---
 
@@ -71,14 +65,12 @@
 
 ### Leading Hypothesis Tree
 
-- **Core Hypothesis:** `Cost Attribution Debt in Open-Core Architecture`
-  - *Sub-Hypothesis A (Support Spillover):* Разработчики ядра непроизвольно тратят дорогой ресурс ($90/ч) на воспроизведение и дебаг багов в `cal.diy`, не генерирующих выручки.
-  - *Sub-Hypothesis B (Conversion Blindspot):* У компании отсутствует инструмент сквозной атрибуции, связывающий пользователя форка `cal.diy` с закрытой сделкой Enterprise Organizations ($28/user/mo).
+- **Core Hypothesis:** `Cost Attribution Debt in Open-Core Architecture`; *Sub-Hypothesis A (Support Spillover):* Разработчики ядра непроизвольно тратят дорогой ресурс ($90/ч) на воспроизведение и дебаг багов в `cal.diy`, не генерирующих выручки. *Sub-Hypothesis B (Conversion Blindspot):* У компании отсутствует инструмент сквозной атрибуции, связывающий пользователя форка `cal.diy` с закрытой сделкой Enterprise Organizations ($28/user/mo).
 
 | Фактор трения / Наблюдение | Direction Conf. (Факт) | Magnitude Conf. (Масштаб) | Первичное доказательство (Уровень L1–L5) | Эпистемическая слепая зона (Требуемая телеметрия) |
 | :--- | :---: | :---: | :--- | :--- |
 | **Open-Core Community Drag** | **60%** (Capped) | **15%** | L4 (OSINT: ~50k stars, 16k forks, 1.2k issues) + L5 (Блог о сплите кодовой базы) | Выгрузка Linear/GitHub: связка `User -> Issue ID -> Customer Tier (Free vs Paid)`. |
-| **Context-Switching Tax ($K \ge 2$)** | **50%** | **10%** | L4 (Структура двух репозиториев: закрытое ядро и форк `cal.diy`) | Анонимизированный CSV тайм-трекинга или git-активности с интервалами коммитов `[ID NOT FOUND]`. |
+| **Context-Switching Tax (K ≥ 2)** | **50%** | **10%** | L4 (Структура двух репозиториев: закрытое ядро и форк `cal.diy`) | Анонимизированный CSV тайм-трекинга или git-активности с интервалами коммитов `[ID NOT FOUND]`. |
 | **Open-Core Conversion Visibility Gap** | **60%** (Capped) | **0%** | L4 (Отсутствие публичных когортных воронок на `cal.com/open`) | Сквозная аналитика: `Telemetry ID / Domain Hash -> Closed Won Enterprise Deals`. |
 | **Дебаг лицензий и ключей** (Issue #26610) | **95%** | **40%** | L1 (Коммит фикса в `deployments.service.ts`) + L1 (Issue #26610) | Выгрузка логов обращений в саппорт с ошибкой HTTP 401 от платящих клиентов. |
 
@@ -91,12 +83,12 @@
 3. **Alt 2 (Licensing & Architecture Clashes):** Архитектурные расхождения между приватным монорепозиторием и публичным кодом приводят к постоянному срыву синхронизации и сбоям валидации лицензий.
 4. **Alt 3 (Integration Delivery Friction):** Узкое место лежит не в комьюнити, а в асинхронных гонках внешних календарей (Google/Microsoft API) в `EventManager.ts` (Issue #28705).
 5. **Alt 4 (Scope / Support Spillover):** Корпоративные клиенты требуют кастомных доработок интеграций под видом стандартной гарантийной поддержки.
-6. **Alt 5 (Null Hypothesis — $H_0$):** Операционные процессы и триаж тикетов протекают в пределах допустимой нормы; накладные расходы на открытый код минимальны и не наносят измеримого ущерба маржинальности; вмешательство не требуется.
+6. **Alt 5 (Null Hypothesis — H₀):** Операционные процессы и триаж тикетов протекают в пределах допустимой нормы; накладные расходы на открытый код минимальны и не наносят измеримого ущерба маржинальности; вмешательство не требуется.
 
 ### Required Disconfirming Evidence Search (Поиск опровергающих улик)
 >
 > *Активный поиск фактов для опровержения ведущей гипотезы (Cost Attribution Debt):*  
-> Аудитор обязан запросить происхождение последних 20 закрытых сделок Enterprise. Если $\ge 50\%$ enterprise-клиентов пришли напрямую из self-hosted установок `cal.diy`, а выгрузка Linear покажет, что разработчики ядра тратят $<5\%$ времени на открытый репозиторий — ведущая гипотеза считается **убитой**. В этом случае открытый код — это сверхокупаемый канал продаж (CAC), а не засор.
+> Аудитор обязан запросить происхождение последних 20 закрытых сделок Enterprise. Если ≥ 50% enterprise-клиентов пришли напрямую из self-hosted установок `cal.diy`, а выгрузка Linear покажет, что разработчики ядра тратят <5% времени на открытый репозиторий — ведущая гипотеза считается **убитой**. В этом случае открытый код — это сверхокупаемый канал продаж (CAC), а не засор.
 
 ### Popperian Falsification Criteria (Критерий фальсификации Поппера)
 >
@@ -107,17 +99,17 @@
 
 ## 3. Cost of Workaround & Friction Ledger (Calibration Model)
 
-> ⚠️ **EPISTEMIC DISCLAIMER:** Данный реестр представляет собой **калибровочную стресс-модель** на базе подтверждённого масштаба компании (Gate 8: Band d, loaded rate $75–$90/ч) и наблюдаемых сигналов. Без первичных выгрузок базы данных эти цифры НЕ являются бухгалтерскими фактами.
+> ⚠️ **EPISTEMIC DISCLAIMER:** Данный реестр представляет собой **калибровочную стресс-модель** на базе подтверждённого масштаба компании (Gate 8: Band d, loaded rate 75–90 USD/ч) и наблюдаемых сигналов. Без первичных выгрузок базы данных эти цифры НЕ являются бухгалтерскими фактами.
 
-$$\text{CoW}_{\text{Lite}} = C_{\text{FTE}} + C_{\text{SaaS}} + C_{\text{Scrap}}$$
-$$\text{где } C_{\text{FTE}} = \sum (\text{Reported Hours} \times W_{\text{evidence}} \times \text{Loaded Rate} \times 52)$$
+**CoW(Lite) = C(FTE) + C(SaaS) + C(Scrap)**
+**где C(FTE) = Σ (Reported Hours × W(evidence) × Loaded Rate × 52)**
 
 | Кандидат-засор / Сигнал затрат | Заявленный объём | Уровень данных | Вес улики ($W$) | Loaded Rate | Стресс-тест CoW | Эпистемический класс |
 | :--- | :--- | :--- | :---: | :--- | :--- | :--- |
 | **Сбои валидации лицензий селф-хоста** (дебаг Issue #26610) | 10 ч/нед (модель) | Level 1 (Issues/PR) | **1.0** | $75 / ч | `[UNVERIFIED]` | `[MODEL_PENDING_TELEMETRY]` |
-| **Паразитный софтверный стек ($C_{\text{SaaS}}$)** (Linear + Intercom + Zendesk) | Наличие дублей | Level 1 (Инвойсы) | **1.0** | Flat Fee | `[UNVERIFIED]` | `[PENDING_INVOICE_AUDIT]` |
+| **Паразитный софтверный стек (C_{SaaS)** (Linear + Intercom + Zendesk) | Наличие дублей | Level 1 (Инвойсы) | **1.0** | Flat Fee | `[UNVERIFIED]` | `[PENDING_INVOICE_AUDIT]` |
 | **Support Escalation Spillover** (инженеры ядра в открытом трекере) | Не подтверждено | Level 4 (OSINT/Issues) | **0.3** | $90 / ч | `[UNVERIFIED]` | `[HEURISTIC_OSINT]` |
-| **Context Switching Tax ($K \ge 2$)** | 20–40% потерь фокуса | Level 4 (Модель) | **0.3** | $90 / ч | `[UNVERIFIED]` | `[HEURISTIC: WEINBERG_MODEL]` |
+| **Context Switching Tax (K ≥ 2)** | 20–40% потерь фокуса | Level 4 (Модель) | **0.3** | $90 / ч | `[UNVERIFIED]` | `[HEURISTIC: WEINBERG_MODEL]` |
 | **ИТОГОВЫЙ ПОДТВЕРЖДЁННЫЙ ПОРОГ (HARD FLOOR):** | — | — | — | — | **IDENTIFIER_NOT_FOUND** | `[NO_SYNTHETIC_PRECISION]` |
 
 *Аудиторский вердикт по деньгам:* Публикация синтетических сумм в долларах строго запрещена до получения сквозной телеметрии. Наблюдаемые сигналы потерь присутствуют (`PRESENT`), но точная сумма ущерба юридически не доказана.
@@ -144,11 +136,8 @@ $$\text{где } C_{\text{FTE}} = \sum (\text{Reported Hours} \times W_{\text{ev
 
 ## 5. The Hierarchy of Interventions (Traversal Gate)
 
-- **Reversibility Rating (Bezos Type 1 vs Type 2):** `HIGH (Two-Way Door)`.
-  - Введение или отмена административного регламента шлюзования issues в GitHub откатывается за 15 минут сменой настроек репозитория. Допустимо принятие решений при $\ge 60\%$ уверенности.
-- **Implementation Blindfold Check (Тест на конфликт интересов):**
-  - *Запрос:* Порекомендовало бы бюро UnderUndre этот аудит и регламенты, если бы ему было законодательно запрещено продавать услуги заказной разработки?
-  - *Результат:* **`PASS (Unbiased)`**. Бюро не предлагает разработку софта; ключевая рекомендация — аналитический стресс-тест за $490 и регламентные меры за $0 CAPEX.
+- **Reversibility Rating (Bezos Type 1 vs Type 2):** `HIGH (Two-Way Door)`. Введение или отмена административного регламента шлюзования issues в GitHub откатывается за 15 минут сменой настроек репозитория. Допустимо принятие решений при ≥ 60% уверенности.
+- **Implementation Blindfold Check (Тест на конфликт интересов):**; *Запрос:* Порекомендовало бы бюро UnderUndre этот аудит и регламенты, если бы ему было законодательно запрещено продавать услуги заказной разработки?; *Результат:* **`PASS (Unbiased)`**. Бюро не предлагает разработку софта; ключевая рекомендация — аналитический стресс-тест за $490 и регламентные меры за $0 CAPEX.
 
 ### Level 0: Do Nothing (Статус-кво)
 
@@ -171,7 +160,7 @@ $$\text{где } C_{\text{FTE}} = \sum (\text{Reported Hours} \times W_{\text{ev
 ### Level 3: Deploy Sovereign Bypass (Custom Build)
 
 - **Вердикт:** `DEFERRED_PENDING_ATTRIBUTION_ANALYSIS`.
-- **Обоснование:** На этапе предварительной разведки разработка кастомного софта не подлежит оценке (`NOT_EVALUABLE_AT_DISCOVERY_STAGE`). Решение может рассматриваться только при доказанном дефиците коробочных решений и Change Capacity $\ge 4$.
+- **Обоснование:** На этапе предварительной разведки разработка кастомного софта не подлежит оценке (`NOT_EVALUABLE_AT_DISCOVERY_STAGE`). Решение может рассматриваться только при доказанном дефиците коробочных решений и Change Capacity ≥ 4.
 
 ---
 

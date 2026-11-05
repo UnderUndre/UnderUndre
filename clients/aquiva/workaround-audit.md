@@ -47,27 +47,14 @@ Blind calibration of 3 anonymized CSV extracts (hours sold vs billed vs logged r
 
 ## 1. Epistemic Horizon & Stakeholder Alignment
 
-- **Economic Buyer (P&L Owner):**
-  - **Jay Keating (CEO)** — Transitioned from COO to CEO on August 7, 2025; discretionary signing authority ($5,000+) confirmed.
-  - **Nikolai Balba (Founder & CTO)** — Sovereign architectural oversight and R&D veto.
-- **Process Sponsor:**
-  - **Ryann Edwards (Senior Director of Service Operations)** — Operational owner of billable utilization, resource visibility, and capacity planning.
-- **JTBD Trigger Catalyst (90-Day Operational Shift):**
-  - Commercial rollout of the **AI POD** delivery model (fixed-rate units, 1–5 day delivery cadences) alongside surging enterprise demand for Agentforce and Data Cloud architectures. Urgent operational requirement to safeguard fixed-fee margins against unbilled rework along architectural integration boundaries.
-- **Observed Vector of Investment (OSINT Evidence):**
-  - Primary packaging: Fixed-rate AI PODs paired with Forward Deployed Engineering (FDE).
-  - Production competency: Enterprise Quote-to-Cash and professional services tooling: **Certinia PSA (formerly FinancialForce) + Salesforce CPQ / Services CPQ** (verified via Senior RevOps Consultant vacancy).
-  - Organizational buffer fortification: Hiring of `Salesforce Support Lead` ("challenge an estimate", "own SLAs") and `Product Owner` ("prevent overengineering").
-  - Asset consolidation: Transition of Hapi Guest CRM into Aquiva's operational core; shared `careers.aquiva.com` portal operates as an established Shared Services synergy rather than an administrative drag.
-- **Master System of Record & Observability Status:** **`UNKNOWN (INTERNAL_PSA_STACK_UNVERIFIED)`**
-  - Internal utilization of Certinia PSA as Aquiva's own operational master ERP remains an unverified hypothesis (client-facing consulting practice vs. internal business operations). To be calibrated during Discovery.
-- **Economic Scale Band & Loaded Rate Base:**
-  - Scale: **Band D ($5M+ / yr gross revenue)**.
-  - Calculated loaded rate for LatAm/EE engineering pool: **$28–$38/hr**; Senior Architects: **$35–$45/hr**; US commercial billing rate baseline: **$90–$160/hr**.
-- **Change Capacity Score:** **3 / 5 (Inertial Compliance)**
-  - *Behavioral Anchor:* Distributed engineering workforce across 10+ countries (LatAm, Eastern Europe, Canada). Operational changes require 3–6 months of sustained executive sponsorship; no active rollbacks observed, but high organizational friction due to geographic dispersion.
-- **Political Sabotage & Friction Vectors (Forces Against Change):**
-  - Senior architects accustomed to operational autonomy may resist granular tracking of unbilled rework, fearing artificial constraints on problem-solving or negative impacts on personal utilization scores.
+- **Economic Buyer (P&L Owner):**; **Jay Keating (CEO)** — Transitioned from COO to CEO on August 7, 2025; discretionary signing authority ($5,000+) confirmed. **Nikolai Balba (Founder & CTO)** — Sovereign architectural oversight and R&D veto.
+- **Process Sponsor:**; **Ryann Edwards (Senior Director of Service Operations)** — Operational owner of billable utilization, resource visibility, and capacity planning.
+- **JTBD Trigger Catalyst (90-Day Operational Shift):**; Commercial rollout of the **AI POD** delivery model (fixed-rate units, 1–5 day delivery cadences) alongside surging enterprise demand for Agentforce and Data Cloud architectures. Urgent operational requirement to safeguard fixed-fee margins against unbilled rework along architectural integration boundaries.
+- **Observed Vector of Investment (OSINT Evidence):**; Primary packaging: Fixed-rate AI PODs paired with Forward Deployed Engineering (FDE). Production competency: Enterprise Quote-to-Cash and professional services tooling: **Certinia PSA (formerly FinancialForce) + Salesforce CPQ / Services CPQ** (verified via Senior RevOps Consultant vacancy). Organizational buffer fortification: Hiring of `Salesforce Support Lead` ("challenge an estimate", "own SLAs") and `Product Owner` ("prevent overengineering"). Asset consolidation: Transition of Hapi Guest CRM into Aquiva's operational core; shared `careers.aquiva.com` portal operates as an established Shared Services synergy rather than an administrative drag.
+- **Master System of Record & Observability Status:** **`UNKNOWN (INTERNAL_PSA_STACK_UNVERIFIED)`**; Internal utilization of Certinia PSA as Aquiva's own operational master ERP remains an unverified hypothesis (client-facing consulting practice vs. internal business operations). To be calibrated during Discovery.
+- **Economic Scale Band & Loaded Rate Base:**; Scale: **Band D ($5M+ / yr gross revenue)**. Calculated loaded rate for LatAm/EE engineering pool: **28–38 USD/hr**; Senior Architects: **35–45 USD/hr**; US commercial billing rate baseline: **90–160 USD/hr**.
+- **Change Capacity Score:** **3 / 5 (Inertial Compliance)**; *Behavioral Anchor:* Distributed engineering workforce across 10+ countries (LatAm, Eastern Europe, Canada). Operational changes require 3–6 months of sustained executive sponsorship; no active rollbacks observed, but high organizational friction due to geographic dispersion.
+- **Political Sabotage & Friction Vectors (Forces Against Change):**; Senior architects accustomed to operational autonomy may resist granular tracking of unbilled rework, fearing artificial constraints on problem-solving or negative impacts on personal utilization scores.
 - **Primary Business Bottleneck (Goldratt TOC):** **SUSPECTED: OPERATIONS & CAPACITY UTILIZATION** (Production pipeline integrity and margin defense within fixed-rate pods).
 
 ---
@@ -76,15 +63,12 @@ Blind calibration of 3 anonymized CSV extracts (hours sold vs billed vs logged r
 
 ### Leading Hypothesis Tree
 
-- **Core Hypothesis:** *Observability Gap in Delivery Telemetry (Captured Work vs. Actual Work in AI PODs).*
-  - *Sub-Hypothesis A (Architectural Seams):* Unaccounted integration complexity (Salesforce Core $\leftrightarrow$ AWS/Kafka/Agentforce) consumes unbilled architect hours across system boundaries.
-  - *Sub-Hypothesis B (Scope Drift):* Enterprise clients absorb net-new requirements under the guise of stabilization within 1–5 day sprint cadences.
-  - *Sub-Hypothesis C (Informal Support Leakage):* Project developers resolve legacy client defects directly in Slack, bypassing official support governance.
+- **Core Hypothesis:** *Observability Gap in Delivery Telemetry (Captured Work vs. Actual Work in AI PODs).*; *Sub-Hypothesis A (Architectural Seams):* Unaccounted integration complexity (Salesforce Core ↔ AWS/Kafka/Agentforce) consumes unbilled architect hours across system boundaries. *Sub-Hypothesis B (Scope Drift):* Enterprise clients absorb net-new requirements under the guise of stabilization within 1–5 day sprint cadences. *Sub-Hypothesis C (Informal Support Leakage):* Project developers resolve legacy client defects directly in Slack, bypassing official support governance.
 
 | Analysis Vector | Direction Conf. (Existence) | Magnitude Conf. (Scale) | Primary Evidence (Level 1–5 & Source) | Epistemic Blindspot (Required Telemetry) |
 | :--- | :---: | :---: | :--- | :--- |
 | **Multi-Project Context Switching** | **60%** (Capped) | **20%** (Capped) | L4 (FDE/PDO model) + L3 (Allocation patterns) | 90-day anonymized resource allocation logs (Resource Requests vs. Actuals). |
-| **Presales $\rightarrow$ Delivery Drift** | **60%** (Capped) | **20%** (Capped) | L4 (PO vacancy: *"prevent overengineering"*) | Delta between signed SOW estimates and actual billable hours across 10 closed sprints. |
+| **Presales → Delivery Drift** | **60%** (Capped) | **20%** (Capped) | L4 (PO vacancy: *"prevent overengineering"*) | Delta between signed SOW estimates and actual billable hours across 10 closed sprints. |
 | **Support Escalation Spillover** | **60%** (Capped) | **20%** (Capped) | L4 (Support Lead vacancy: *"challenge an estimate"*) | Ratio of L1/L2 warranty tickets escalated directly to active pod engineers. |
 | **Internal Telemetry Observability Gap** | **50%** | **15%** | L4 (RevOps vacancy with Certinia PSA requirements) | Empirical confirmation of internal master capacity-planning platform. |
 
@@ -97,13 +81,13 @@ Blind calibration of 3 anonymized CSV extracts (hours sold vs billed vs logged r
 3. **Alt 2 (Bench Oscillation):** Seasonal swings between peak billable utilization and bench carry costs between major client project completions.
 4. **Alt 3 (Contractual Scope Ambiguity):** Ambiguous acceptance criteria enabling clients to push out-of-scope functional requests under warranty clauses.
 5. **Alt 4 (Support Escalation Leak):** Senior developers resolving warranty issues informally, bypassing official ticketing workflows.
-6. **Alt 5 (Null Hypothesis - $H_0$):** The AI POD delivery engine operates strictly within demonstrated operational tolerance (<3% margin variance); internal accounting accurately reflects true delivery costs.
+6. **Alt 5 (Null Hypothesis - H₀):** The AI POD delivery engine operates strictly within demonstrated operational tolerance (<3% margin variance); internal accounting accurately reflects true delivery costs.
 
 ### Required Disconfirming Evidence Search
 >
 > *Auditor must actively seek data that falsifies the leading hypothesis:*
 >
-> 1. If analysis of 10 closed AI POD sprints reveals a consistent gross margin $\ge 45\%$ with negligible unbilled overtime, the leading hypothesis is discarded.
+> 1. If analysis of 10 closed AI POD sprints reveals a consistent gross margin ≥ 45% with negligible unbilled overtime, the leading hypothesis is discarded.
 > 2. If task-tracking telemetry reveals no correlation between complex hybrid integration tasks and sprint delivery delays, the "architectural seam" hypothesis is formally rejected.
 
 ### Popperian Falsification Criteria
@@ -115,15 +99,15 @@ Blind calibration of 3 anonymized CSV extracts (hours sold vs billed vs logged r
 
 ## 3. Cost of Workaround & Friction Ledger (Calibration Model)
 
-> ⚠️ **EPISTEMIC DISCLAIMER:** This ledger is a **calibrated heuristic stress-test** based on industry baselines (Loaded Rate: $28–$38/hr, mandatory 50% Anti-TDAGU Haircut applied). Without direct primary database dumps, these figures do NOT constitute verified accounting data.
+> ⚠️ **EPISTEMIC DISCLAIMER:** This ledger is a **calibrated heuristic stress-test** based on industry baselines (Loaded Rate: 28–38 USD/hr, mandatory 50% Anti-TDAGU Haircut applied). Without direct primary database dumps, these figures do NOT constitute verified accounting data.
 
-$$\text{CoW}_{\text{Lite}} = C_{\text{FTE}} + C_{\text{SaaS}} + C_{\text{Scrap}}$$
+**CoW(Lite) = C(FTE) + C(SaaS) + C(Scrap)**
 
 | Candidate Friction Point | Reported Burden | Evidence Base | Haircut (-50%) | Loaded Rate | Stress-Test CoW | Epistemic Class |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Context Switching ($K \ge 2$):** Senior fragmentation across pods | 10 hrs/wk per lead | PDO Allocation Baseline | 5 hrs/wk ($\times$ 10 leads = 50 hrs/wk) | $35 / hr | **$91,000 / yr** | `[HEURISTIC_MODEL]` |
-| **Presales Scope Drift:** Unbilled rework at sprint launch | 8 hrs/wk per team | SPI Research Benchmark | 4 hrs/wk ($\times$ 6 pods = 24 hrs/wk) | $38 / hr | **$47,424 / yr** | `[HEURISTIC_MODEL]` |
-| **Support Spillover:** Pod engineers triaging warranty tickets | 6 hrs/wk per team | Support Lead Mandate | 3 hrs/wk ($\times$ 6 pods = 18 hrs/wk) | $28 / hr | **$26,208 / yr** | `[HEURISTIC_MODEL]` |
+| **Context Switching (K ≥ 2):** Senior fragmentation across pods | 10 hrs/wk per lead | PDO Allocation Baseline | 5 hrs/wk (× 10 leads = 50 hrs/wk) | $35 / hr | **$91,000 / yr** | `[HEURISTIC_MODEL]` |
+| **Presales Scope Drift:** Unbilled rework at sprint launch | 8 hrs/wk per team | SPI Research Benchmark | 4 hrs/wk (× 6 pods = 24 hrs/wk) | $38 / hr | **$47,424 / yr** | `[HEURISTIC_MODEL]` |
+| **Support Spillover:** Pod engineers triaging warranty tickets | 6 hrs/wk per team | Support Lead Mandate | 3 hrs/wk (× 6 pods = 18 hrs/wk) | $28 / hr | **$26,208 / yr** | `[HEURISTIC_MODEL]` |
 | **TOTAL INDICATIVE CALIBRATION GAP:** | — | — | **92 hrs / wk** | — | **$164,632 / yr** | `[UNVERIFIED_STRESS_TEST]` |
 
 ---
@@ -149,7 +133,7 @@ $$\text{CoW}_{\text{Lite}} = C_{\text{FTE}} + C_{\text{SaaS}} + C_{\text{Scrap}}
 ## 5. Hierarchy of Interventions & Product Discovery
 
 - **Reversibility Rating:** **`HIGH (Two-Way Door)`**  
-  *(A 5-day diagnostic telemetry validation and the Focus Allocation Rule are lightweight, reversible experiments; reversion requires under 24 hours. Actionable at an intervention confidence threshold $\ge 60\%$).*
+  *(A 5-day diagnostic telemetry validation and the Focus Allocation Rule are lightweight, reversible experiments; reversion requires under 24 hours. Actionable at an intervention confidence threshold ≥ 60%).*
 - **Implementation Blindfold Check:**  
   *Query:* "Would the bureau recommend this intervention if legally forbidden from selling implementation engineering services (Sprint B / Custom Build)?"  
   *Result:* **`PASS (Unbiased)`** — The primary recommendation is restricted entirely to $0 operational policies (SOPs) and data validation.
@@ -182,14 +166,9 @@ $$\text{CoW}_{\text{Lite}} = C_{\text{FTE}} + C_{\text{SaaS}} + C_{\text{Scrap}}
 
 *(Product Discovery Lead perspective: Standardizing repeating delivery patterns into reusable assets)*
 
-1. **Standardized Pattern 1: "Agentforce $\leftrightarrow$ Enterprise Core Integration Gateway"**
-   - *Friction Point:* Deployments connecting autonomous AI agents to enterprise backends (AWS/Kafka/ERP) repeatedly rebuild bespoke context-caching and state-synchronization logic from scratch.
-   - *Productized Asset:* **SpecKit Blueprint: Hybrid State Broker** — A standardized OpenAPI/FSM contract managing intermediate state verification. Rather than custom code, clients receive a pre-architected integration blueprint.
-2. **Standardized Pattern 2: "AI POD Definition-of-Ready (DoR) Scoping Engine"**
-   - *Friction Point:* Presales architects spend up to 25% of their working hours manually auditing architectural scope and Governor Limit risks prior to committing to fixed pod rates.
-   - *Productized Asset:* **SpecKit Scoping Engine** — A declarative risk-matrix and machine-readable checklist that evaluates enterprise integration constraints, moving technical validation upstream without manual friction.
-3. **Market Scalability Potential:**
-   - This friction is shared across all top-tier Salesforce Summit/PDO partners shifting from T&M staffing to fixed-rate AI delivery units. These modular specifications exhibit high commercial repeatability.
+1. **Standardized Pattern 1: "Agentforce ↔ Enterprise Core Integration Gateway"**; *Friction Point:* Deployments connecting autonomous AI agents to enterprise backends (AWS/Kafka/ERP) repeatedly rebuild bespoke context-caching and state-synchronization logic from scratch. *Productized Asset:* **SpecKit Blueprint: Hybrid State Broker** — A standardized OpenAPI/FSM contract managing intermediate state verification. Rather than custom code, clients receive a pre-architected integration blueprint.
+2. **Standardized Pattern 2: "AI POD Definition-of-Ready (DoR) Scoping Engine"**; *Friction Point:* Presales architects spend up to 25% of their working hours manually auditing architectural scope and Governor Limit risks prior to committing to fixed pod rates. *Productized Asset:* **SpecKit Scoping Engine** — A declarative risk-matrix and machine-readable checklist that evaluates enterprise integration constraints, moving technical validation upstream without manual friction.
+3. **Market Scalability Potential:**; This friction is shared across all top-tier Salesforce Summit/PDO partners shifting from T&M staffing to fixed-rate AI delivery units. These modular specifications exhibit high commercial repeatability.
 
 ---
 
