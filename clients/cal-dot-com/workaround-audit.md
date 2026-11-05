@@ -11,7 +11,7 @@
 
 ## 0. Why you received this audit
 
-I am Andrei, founder of UnderUndre — a one-person productized engineering bureau focused on quantifying operational friction. I prepared this pre-interview discovery memo for Cal.com from public data — no vendors, no pitch deck, just a falsifiable read of your open-core economics.
+I am Andrei, founder of underundre.com — a one-person productized engineering bureau focused on quantifying operational friction. I prepared this pre-interview discovery memo for Cal.com from public data — no vendors, no pitch deck, just a falsifiable read of your open-core economics.
 
 ### What caught my attention
 
