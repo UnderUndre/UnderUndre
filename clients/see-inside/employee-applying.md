@@ -1,7 +1,7 @@
 # Job Discovery & Value Proposition: Ассистент CEO
 
-Кандидат: Андрей
-Контакт: underundre.com
+- Кандидат: Андрей
+- Контакт: underundre.com
 
 ---
 
