@@ -62,7 +62,7 @@ Reviewers identify themselves by tool — `claude`, `codex`, `antigravity`, `gem
 
 ### VII. Artifact Versioning
 
-Every pipeline stage that mutates a feature artifact (specify, clarify, **requirements-audit**, plan, tasks, **test-design**, review, **qa-signoff**, **bizplan**, **workaround-audit**) MUST tag the commit via `.specify/scripts/{bash,powershell}/snapshot-stage.{sh,ps1}` using the convention `<stage>/<slug>/v<N>`.
+Every pipeline stage that mutates a feature artifact (specify, clarify, **requirements-audit**, plan, tasks, **test-design**, review, **qa-signoff**, **bizplan**) MUST tag the commit via `.specify/scripts/{bash,powershell}/snapshot-stage.{sh,ps1}` using the convention `<stage>/<slug>/v<N>`.
 
 - Tags are the **only** historical record. **No parallel `.history/` files** — git is the history. Duplicating into `specs/<slug>/.history/` is an anti-pattern: it drifts and bloats the tree.
 - `/speckit.diff <slug>` reads tags to compare iterations without speculative file copies.
@@ -169,46 +169,77 @@ Rules:
 
 Rationale: a requirements defect caught at stage 2.5 costs minutes; the same defect at stage 9 or in production costs a release. If a requirement cannot be tested, the requirement is the defect.
 
-### XIII. Sovereign Capacity & Productization Discipline (Little's Law & ISO 29110)
+### XIII. Reality Over Speculation (NON-NEGOTIABLE)
 
-Production capacity in productized engineering is strictly constrained by physical queuing theory ($L = \lambda W$). A solo or micro-engineering unit MUST NOT allow unbuffered commercial intake to induce context-switching thrashing or violate delivery SLAs.
+При высокой неопределенности реальные данные от клиентов, пользователей и рынка имеют безусловный приоритет над дальнейшим спекулятивным анализом, моделированием и кабинетными исследованиями.
 
-1. **Strict WIP Caps:** `/speckit.implement` MUST NOT be initiated on a new commercial client slot if active implementation branches exceed the declared concurrency limit (`MAX_CONCURRENT_SPRINTS = 2` by default). Excess demand is queued into a deterministic, deposit-backed Waitlist.
-2. **The Intake Gate (Zero-Start on Unsanitized Input):** The delivery timebox clock (e.g. 14 days) CANNOT start upon financial receipt alone. It is strictly gated by the completion of the formal Intake Checklist (domain parameters, access tokens, entity schemas). An incomplete intake locks the project in `ON_HOLD_PENDING_ASSETS` without burning production capacity.
-3. **Mandatory Productization Extraction (Cycle 6):** Every completed commercial delivery MUST execute a 1-day Knowledge Capture phase before initiating the next major build. Reusable FSM models, API connectors, and diagnostic rules MUST be extracted into internal SpecKit templates or packages (`/learn` and `/improve` loop). Re-inventing solved operational logic in subsequent client engagements is classified as architectural waste.
+Если стоимость эксперимента низкая, а потенциальная ценность полученной информации высокая, немедленный запуск эксперимента строго предпочтительнее дополнительного раунда планирования, ресерча или специфицирования.
 
-### XIV. Signal-Based GTM & Reality Over Speculation (NON-NEGOTIABLE)
+**Формальный тест (Test of Reality):**
+Перед любым новым циклом исследования, ревью, уточнений, переписывания планов или спецификаций обязательно задаётся вопрос:
+1. Какой конкретный факт мы пытаемся выяснить?
+2. Можем ли мы узнать его через реальный эксперимент (интервью, продажа, пилот, оффер, сбор сырых логов) быстрее, дешевле и надежнее?
 
-All client acquisition MUST run on observed market signals (trigger-based outbound), not on ICP demographics or desk research. The GTM loop is: **Signal → Trigger Playbook → Touch → Raw Log → Revision**.
+Если да: **Эксперимент > Анализ**. Документ запрещается писать до получения результатов эксперимента.
 
-1. **Touch Log is the only Level 1 conversion source.** Every outreach touch is logged in `outreach-touch-log.md` (Date, Company, Trigger, Channel, checkpoints, Reason code). Verdicts on any trigger require a sample of **30–50 touches**; below that, no conclusions are permitted. Aggregates are derived from the log — never maintained as a separate source.
-2. **External benchmarks are priors, never truth.** Industry statistics (reply rates, conversion curves) enter the funnel math tagged `[HEURISTIC]` with an explicit `[UNRELIABLE: LEVEL 3]` vendor-blog claim where applicable. L1 status is reserved exclusively for the touch log and delivered audits.
-3. **Signal ≠ Diagnosis (Trigger Playbook Writing Rules).** First-touch notes present 2–4 competing hypotheses (including Null / Healthy Growth), never asserted causes or magnitude claims. OSINT ceiling: Direction ≤ 60%, Magnitude ≤ 20%.
-4. **No early solution selling.** First contact sells only the willingness to check which scenario applies; the Build/Don't-Build verdict belongs to SpecKit Discovery.
-5. **Tool Ladder gates (no subscriptions ahead of evidence):** Stage 0 = Sales Navigator + flat log; upgrade to Clay at 20–30 logged leads with ≥30% reply on 1–2 triggers; CRM/Apollo automation only after 3–5 paid clients. Any tool purchase is one month with a keep/kill decision based on log deltas.
-6. **Kanban principle for GTM:** the market, not the founder's taste, decides which triggers are gold or garbage. Revision of the trigger pack happens at most monthly, by log data only.
+**Закон логов реальности:**
+- $100\text{ часов анализа рынка} < 1\text{ разговор с реальным клиентом}$
+- $20\text{ бизнес-планов} < 1\text{ выставленный инвойс}$
+- $50\text{ гипотез} < 1\text{ платящий пользователь}$
 
-### XV. Two-Layer Client Artifacts (Narrative Layer)
+**Правило Unknowns:**
+Если разногласие или неопределенность касается спроса, готовности платить (willingness to pay), профиля клиента (ICP), продуктовой упаковки или реальной ценности услуги — **категорически запрещено** принимать решение исключительно на основе кабинетного ресерча или LLM-моделирования. Требуется получение сырых логов из физической реальности:
+- проблемное или решенческое интервью;
+- выставленный счёт или прямая продажа;
+- боевой пилотный запуск;
+- практический аудит / Discovery;
+- прямой оффер или зафиксированный отказ клиента с причиной.
 
-Every client-facing artifact (Discovery memo, proposal, audit) MUST be two-layered. Decision-makers scan before they read; the forensic body is dead weight if the front layer fails.
+**Защита от паралича анализа (Anti-Analysis Paralysis):**
+Главный риск зрелой проектной системы — не «недоработанная спека» или «недостаточно строгий аудит» (их планка гарантирована Принципами I–XII), а **переоптимизация понимания при фатальном недоинвестировании в контакт с реальностью** (20 ревью $\to$ 10 исследований $\to$ 5 переписываний $\to$ 0 клиентов).
 
-1. **Front layer (≤250 words, mandatory):** `§0 «Почему вы получили этот аудит»` — produced by `/speckit.narrative`, adversarially reviewed by `/speckit.red-team-narrative` (PASS required before send). Structure: why-this-memo → observed signals (with identifiers) → leading hypothesis marked "preliminary" → competing alternatives (incl. Null) → 5-day verification step → 60-second BLUF block (risk / confidence / data needed / first step / probability that new software is needed).
-2. **Forbidden in the front layer:** asserted diagnoses, magnitude numbers without L1/L2 evidence, internal jargon (TOC, TDABC, Goldratt, Bayes, Level 0–3, Change Capacity), solution selling, hidden uncertainty.
-3. **The block MUST NOT be named "Executive Summary"** — it is skipped by design. Naming canon: "Почему вы получили этот аудит" / "What attracted our attention".
-4. Chain of custody: `Signal → Trigger Playbook → SpecKit Discovery → speckit.narrative → speckit.red-team-narrative → Final Memo`.
+> **Канонический запрет:** Если реальный мир может дать ответ быстрее и дешевле, чем очередной документ, документ запрещается писать до проведения эксперимента.
 
-### XVI. Telemetry Quality Before Telemetry Analysis (Zero-GIGO / ISO 25012) [NON-NEGOTIABLE]
+**Инверсия вектора разработки:**
+Вместо академического цикла *«Качество в вакууме $\to$ потом когда-нибудь рынок»* действует строгий производственный контур:
+$$\text{Достаточно хорошо} \longrightarrow \text{Рынок / Контакт с реальностью} \longrightarrow \text{Сырые логи} \longrightarrow \text{Доводка качества}$$
 
-No analytical conclusion, TDABC dollar leakage model, or DORA delivery velocity score may be accepted as Level 1/2 truth before passing the Three-Color Telemetry Triage. Relying on raw tracker data without validating its collection mechanics is classified as a synthetic hallucination.
+### XIV. Public Intelligence Loop & Validated Finding
 
-1. **Three-Color Telemetry Triage:**
-   - **GREEN (Usable L1 Telemetry):** Automated VCS commit logs, CI/CD pipeline runs, APM access traces, and immutable deployment webhooks. Permits full DORA metrics calculation and definitive bottleneck localization.
-   - **YELLOW (Incomplete L2/L3 Telemetry):** Jira/YouTrack timesheets with >20% missing estimates or irregular logging. Enforces mandatory 50% Forensic Haircut + OSINT/Internal weighting ($W \le 0.5$). Permits indicative friction range modeling only.
-   - **RED (Toxic Telemetry / Goodhart Collapse):** Chats (Telegram/WhatsApp), unestimated backlog tickets, or bulk timesheet logging ("8h every Friday"). FORBIDS dollar leakage estimation. Mandates an immediate finding: `OBSERVABILITY_BLACKOUT` and restricts intervention to Level 1 SOP for telemetry discipline.
-2. **The Discovery Double-Lock:**
-   - Product 0 (Tripwire Audit, $350–$490) is always permitted (`GO`) based on plausible asymmetry.
-   - Product 1 (Governance/SOP Sprint, $1,500–$3,500) requires at least YELLOW telemetry.
-   - Product 2 (Sovereign Build Sprint, $5,000+) is HARD LOCKED until GREEN telemetry proves an active operational bottleneck with projected ROI $\ge 5\times$.
+Публичный контент — не маркетинговая обёртка аудита, а отдельный продукт, построенный на атоме инженерной правды — **Validated Finding**: находке, которая пережила встречу с реальностью (подтверждена телеметрией L1/L2 ИЛИ честно признана ложноположительной через Alt 0 / Null Hypothesis). Находка, не пережившая проверку, — Suspected Friction, а не паттерн.
+
+**Контентная лестница (5 уровней, каждый уровень — свой продукт):**
+
+| Уровень | Продукт | Команда | Задача |
+| :--- | :--- | :--- | :--- |
+| 1 | **Pattern Teardown** (knowledge product) | `/speckit.pattern-teardown` | Обобщённый механизм: снять когнитивный барьер, показать знание системных законов |
+| 2 | **Signal Teardown** (audience product) | `/speckit.signal-teardown` | Обезличенный кейс: доказать, что паттерны наблюдаются на реальном рынке |
+| 3 | **Discovery Memo** ($490, sales product) | `/speckit.speckit-discovery` | Персональная приватная диагностика, двухслойное мемо (§0) |
+| 4 | **Assessment & SOP** ($1,500–3,500) | `/speckit.business-audit` | Доступ к телеметрии L1/L2, санация горлышек |
+| 5 | **Sovereign Build** ($5,000+) | `/speckit.specify` + `/speckit.plan` | Инженерная реализация |
+
+**Производственная цепь (не разрывать):** Raw Signal (Touch Log / OSINT) → Signal → Discovery ($490) → **Validated Finding** (True Positive ИЛИ документированный False Positive) → Pattern → System Law → Content → Audience → Discovery. Прямой аутрич (Принцип XIII) остаётся REQUIRED — публичный контент есть артиллерийская подготовка перед директ-каналом, а не его замена.
+
+**Санитарные вентили публичных разборов (нарушение = запрет публикации):**
+1. **Blinded by Default:** целевая компания анонимизируется в отраслевой дескриптор («сервис на 30–50 человек, стек X»); именованный разбор — только флагом `--named-target` при верифицируемом публичном статусе (публичная компания, открытый репозиторий, письменное согласие).
+2. **Формулировка сильнее дисклеймера:** «разбор сигналов» с альтернативными версиями — protected opinion по раскрытым фактам (Milkovich v. Lorain Journal Co., 497 U.S. 1 (1990); Restatement (Second) of Torts § 566), «диагноз компании» — деликтный риск. Диагноз запрещён даже в обезличенном виде.
+3. **Alt 0 Balance:** ≥ 50% объёма гипотез — версии здорового масштабирования; публичный пост без честной «нулевой версии» — токсичный наезд, не диагностика.
+4. **Banned Internal Kitchen:** в публичном артефакте запрещены TDABC, Goldratt, Muda, номера принципов конституции, Level 0–3 — только наблюдаемые факты и человеческий язык.
+5. **Negative Case обязателен:** публично задокументированный False Positive («моя гипотеза была неверна, у них всё нормально») — обязательный элемент портфолио разборов; он генерирует больше доверия, чем 20 победных отчётов.
+
+**Pattern Promotion Gate (паттерн не публикуется, пока не прошёл гейт):**
+
+```yaml
+pattern_promotion_gate:
+  minimum_signals: 3                      # минимум 3 сырых сигнала
+  minimum_distinct_environments: 3        # минимум 3 разные компании/контекста
+  minimum_falsification_survivals: 1      # паттерн обязан пережить >= 1 документированный False Positive
+  grounding_requirement: "pattern must be grounded in a falsifiable systems mechanism"
+```
+
+`grounding_requirement` — принцип, а не enum законов: подойдёт любая фальсифицируемая системная механика (Little, Conway, Kingman, TOC, Goodhart, Brooks и будущие). Хардкод-список фамилий запрещён как архитектурный дефект.
+
+**Freeze Scope:** дальнейшие правки данной конституции и контурных команд разрешены только после накопления ≥ 30 строк в `outreach-touch-log.md` и минимум одного живого документированного False Positive. До этого момента любые архитектурные правки классифицируются как холостой ход (Principle XIII).
 
 ## Technical Constraints
 
@@ -253,13 +284,13 @@ This file (the constitution) is loaded at the Constitution Check gate of `/speck
 4. **Complexity must be justified.** Every new agent, transformer, target, or skill adds load to every downstream session. A change that doesn't earn its weight is rejected.
 5. **Anti-sycophancy applies to review of this file too.** If a principle above is wrong for the project, say so and propose an amendment. Don't quietly ignore it.
 
-**Version**: 1.10.0 | **Ratified**: 2026-04-17 | **Last Amended**: 2026-11-05
+**Version**: 1.10.0 | **Ratified**: 2026-04-17 | **Last Amended**: 2026-11-07
 
 ### Changelog
 
-- **1.10.0** (2026-11-05) — Added Principle **XIV: Signal-Based GTM & Reality Over Speculation (NON-NEGOTIABLE)** (trigger-based outbound only; `outreach-touch-log.md` as sole Level 1 conversion source; 30–50 touch sample before verdicts; external benchmarks as `[HEURISTIC]` priors only; Tool Ladder subscription gates) and Principle **XV: Two-Layer Client Artifacts (Narrative Layer)** (mandatory ≤250-word front layer `§0 «Почему вы получили этот аудит»` + 60-second BLUF; `speckit.narrative` → `speckit.red-team-narrative` chain; "Executive Summary" naming banned). New commands: `speckit.speckit-discovery` (renamed from workaround-audit), `speckit.narrative`, `speckit.red-team-narrative`, `speckit.sales-plan`, `speckit.outreach-sdr`.
+- **1.10.0** (2026-11-07) — Added Principle **XIV: Public Intelligence Loop & Validated Finding**. Content ladder (Pattern Teardown → Signal Teardown → Discovery $490 → Assessment → Sovereign Build) as a separate public-intelligence product line; **Validated Finding** cemented as the atom of engineering truth (survived L1/L2 telemetry OR honestly documented False Positive). Sanitary valves for public teardowns: Blinded by Default (named target via `--named-target` only), signal-form wording (protected opinion per Milkovich v. Lorain Journal, 497 U.S. 1 (1990) / Restatement § 566), Alt 0 Balance ≥ 50%, Banned Internal Kitchen, mandatory public Negative Case. **Pattern Promotion Gate**: ≥3 signals / ≥3 distinct environments / ≥1 survived falsification / `grounding_requirement: falsifiable systems mechanism` (anti-hardcode). Direct outreach (XIII) stays REQUIRED. **Freeze Scope**: further constitution edits blocked until ≥30 touch-log rows + ≥1 live False Positive (anti-polish gate per Sprint-0 Telemetry Run). New commands: `/speckit.signal-teardown`, `/speckit.pattern-teardown`.
 
-- **1.9.0** (2026-10-26) — Added Principle **XIII: Sovereign Capacity & Productization Discipline** (Little's Law, ISO/IEC 29110 VSE basic profile, WIP limit $\le 2$ parallel sprints, 48h Zero-Call Intake Gate, mandatory 24h Productization Extraction loop). Prevents solo-engineer hydraulic overload and asset waste.
+- **1.9.0** (2026-10-31) — Added Principle **XIII: Reality Over Speculation (NON-NEGOTIABLE)**. Systematic counterbalance against analysis paralysis: Experiment > Speculation; raw logs of reality (customer interviews, invoices, pilots, Discovery audits, direct offers) strictly supersede extended desk research and speculative spec/plan rewrites. Hard gate: if reality can answer faster and cheaper than an authored document, writing the document is prohibited until the experiment is conducted. Enforces "Good Enough → Market / Reality → Raw Logs → Quality Refinement".
 
 - **1.8.0** (2026-10-25) — Added Principle **XII: QA & Test Artifact Contour** (ISO/IEC/IEEE 29119-2/3/4 + 29148). Three new stages: `/speckit.requirements-audit` (2.5, REJECT blocks plan), `/speckit.test-design` (5.5, generates `qa/{rtm-matrix,test-cases,uat-scenarios,regression-suite}.md`), `/speckit.qa-signoff` (8.5, APPROVED / APPROVED WITH RISKS / BLOCKED; BLOCKED gates code-review & merge). Snapshot stages `requirements-audit|test-design|qa-signoff` reserved. Hotfix carve-out (IX) and chore waiver apply. Pipeline line updated.
 
