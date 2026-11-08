@@ -1,5 +1,5 @@
 ---
-description: Perform a forensic business audit, bottleneck diagnosis, and turnaround restructuring plan for an existing business or operating project. Banned MBA fluff. Focus on 13-week cash runway, As-Is diagnostic (Unit/Contribution margin, aging debt, SIPOC cycle time, Lost-order CustDev), Goldratt TOC bottlenecks, Retrenchment (sanitation/cost cutting), and Renewal/Repositioning roadmap.
+description: Perform a forensic business audit, bottleneck diagnosis, and turnaround restructuring plan for an existing business or operating project. Dual-Mode Data Access Gate (--mode inside-out | outside-in): inside-out = full 13-week TWCF direct method (TMA) with bank/ERP L1 data; outside-in = OSINT-only Stress-Test Hypothesis Register with STRICT BAN on precise financial figures. Banned MBA fluff. Focus on 13-week cash runway, As-Is diagnostic (Unit/Contribution margin, aging debt, SIPOC cycle time, Lost-order CustDev), Goldratt TOC bottlenecks, Retrenchment (sanitation/cost cutting), and Renewal/Repositioning roadmap.
 handoffs:
   - label: Start Remediation Worktree
     agent: speckit.start
@@ -29,6 +29,8 @@ Optional args (any order, free text):
 - `--update` — force update mode (update existing audit after remediation sprint)
 - `--path <file>` — explicit audit path (default: auto-detect under `docs/*business-audit*.md` or `docs/*turnaround*.md`)
 - `--quick-scan` — emergency triage mode (focus strictly on Phase 0 Cash Flow & Phase 2 Bottleneck)
+- `--mode <inside-out | outside-in>` — **MANDATORY Data Access Gate** (default: `outside-in` — safe). `inside-out` = full precision engine, requires L1 artifacts; `outside-in` = OSINT-only Stress-Test Hypothesis Register, precise financial figures FORBIDDEN. See §0 Data Access Gate.
+- `--data <glob1,glob2>` — explicit L1 artifact paths (bank statements CSV/XLSX, 1C/ERP export, aging AR register, payment-gateway logs) required for `inside-out`
 - `--request-external-review` — after write, print explicit prompt to run `/speckit.business-audit-review` (or manual independent review pass); **auto-on** for CREATE and major pivots
 
 ultrathink
@@ -52,6 +54,19 @@ Make the **business audit and turnaround strategy an actionable SpecKit engineer
 3. **Emergency cash crisis**: triage burn rate, establish a 13-week rolling cash flow, and execute sanitation (Retrenchment).
 
 Does **not** replace `spec.md`. Audit = diagnostic / cash runway / bottleneck analysis / sanitization / pivot strategy; spec = technical implementation of the fix.
+
+## 0. Data Access Gate (Dual-Mode Intake Switch — MANDATORY)
+
+Каждый запуск обязан объявить режим доступа к данным. Это входной редуктор давления: без него команда провоцирует галлюцинации ложной точности — синтетический 13-недельный TWCF и CM₂ по SKU, высосанные из одного URL.
+
+| Mode | Вход (L1-первичка) | Разрешено | СТРОГО ЗАПРЕЩЕНО |
+| :--- | :--- | :--- | :--- |
+| **`inside-out`** | Банковские выписки за ≥ 90 дней (CSV/XLSX), выгрузка 1C/ERP, закрытые акты, реестр оплат и aging дебиторки, логи платёжного шлюза | Полный движок: боевой 13-недельный TWCF **прямым методом** (TMA standard, допустимая погрешность ≤ 10–15% по ковенантам — не косвенным через EBITDA), CM₂ по SKU, AR aging, PCE/FPY, все пороги §2b | Ничего сверх предоставленного инпута |
+| **`outside-in`** | Только OSINT: сайт/лендинг, вакансии, цены, отзывы, стек, соцсигналы | **Stress-Test Hypothesis Register**: каждая метрика — гипотеза с диапазоном и статусом `ACTIVE / PLAUSIBLE / DORMANT` + обязательная колонка «какие данные L1 открывают эту метрику» | **Любые точные финансовые фигуры**: P&L, OCF, Runway в неделях, CM₂ по SKU, AR aging %, пороги §2b как факты |
+
+**Auto-detection:** переданы финансовые файлы/выгрузки → предложить `inside-out`; передан только URL или описание «с улицы» → форс `outside-in` с явным предупреждением. Пользователь переопределяет явно флагом.
+
+**Fail-Safe: Observability Blackout.** Если объявлен `inside-out`, но банковские логи за 90 дней не предоставлены → статус `HEALTHY / STABLE` ЗАПРЕЩЁН; принудительно выставляется `DISCOVERY_FAILURE_MODE: OBSERVABILITY_BLACKOUT`; вердикт ограничивается планом сбора первички (Phase 0 = data collection sprint), инвестиционные рекомендации и вердикты по капиталу запрещены. Это операционализация Принципа XIII (Reality Over Speculation): нет Level 1 — нет точных чисел, есть только гипотезы с диапазонами.
 
 ## Core Mindset & Execution Pipeline (The 5-Phase Turnaround Engine)
 
@@ -112,6 +127,14 @@ If user --create OR (not EXISTING_AUDITS):
   MODE = create
 Else if user --update OR EXISTING_AUDITS:
   MODE = update
+
+DATA_MODE:
+  If user --mode inside-out AND 90-day bank/ERP/artifact globs present → INSIDE_OUT
+  If user --mode inside-out WITHOUT 90-day artifacts → FAILURE_MODE = OBSERVABILITY_BLACKOUT
+      (Phase 0 converts to data-collection sprint; HEALTHY/STABLE statuses FORBIDDEN)
+  Else (no --mode OR --mode outside-in) → OUTSIDE_IN (default, safe)
+      Outside-in FORBIDS: exact P&L/OCF figures, Runway in weeks, CM2 by SKU, AR aging %,
+      any §2b threshold emitted as fact → emit Stress-Test Hypothesis Register instead
 ```
 
 ## Execution Steps
@@ -158,6 +181,9 @@ Before finalizing, audit against these non-negotiable operational valves:
 | **The Pumping-in-Clog Ban**         | BANNED increasing ad spend if conversion rate is declining due to product defects or fulfillment SLA breaches.                                  |
 | **Zombie Product Execution**        | Any SKU/service with negative contribution margin after full variable cost allocation MUST be scheduled for immediate repricing or termination. |
 | **Working Capital Release Target**  | Must explicitly quantify cash to be liberated from stale inventory (DIO > 90d) and uncollected invoices (DSO > 45d).                            |
+| **BNPL / Installment Haircut (Financing Gate)** | Installment sales through banks/BNPL are NOT plain receivables: `Net_Cash_Realized = Gross_Contract × (1 − MDR) − Provision_for_Churn_Refunds`. Bank MDR discount on installment contracts runs 10–18% taken upfront; when credit term ≫ service term (12-month credit on a 4-month course), book a churn-refund regress provision — bank claws back funds on student drop-off. Counting installments as plain AR inflates cash position and hides the leak. |
+| **Founder Extraction / Tax Tunneling Valve** | In turnover-tax jurisdictions (Armenia / CIS, ИП regimes) official EBITDA is meaningless until normalized: owner's personal expenses booked as subcontracts, "consulting fees", or representative costs MUST be reclassified before any margin/runway conclusion. |
+| **False Precision Ban (Dual-Mode Enforcement)** | In `outside-in` mode ANY exact financial figure (Runway in weeks, CM₂, AR aging %, OCF) in the output = reject own draft. Emit Stress-Test Hypothesis Register (range + ACTIVE/PLAUSIBLE/DORMANT + "what L1 data unlocks this") instead. In `inside-out` without 90-day artifacts — same ban + OBSERVABILITY_BLACKOUT. |
 | **Single Primary Constraint (TOC)** | Exactly ONE primary operational bottleneck must be declared as the active constraint. Declaring 5 equal bottlenecks is prohibited.              |
 | **Lost-Order Empirical Proof**      | Churn reasons cannot be based on internal staff opinions; must cite direct feedback from lost customers / churn interviews.                     |
 | **Capacity & Key-Person Shield**    | If the primary constraint is founder/key-person operational overload, plan MUST mandate delegation, automation, or scope down-sizing.           |
@@ -187,6 +213,18 @@ Every generated audit MUST incorporate these core methodologies:
 
 When executing a business audit or turnaround plan, the audit MUST evaluate and encode the **5-Category Forensic Diagnostic Framework** and **Advanced PE/VC Metrics**:
 
+> ⚠️ **Mode Gate:** все пороги и формулы ниже — precision-инструменты режима `inside-out` (L1-первичка на руках). В режиме `outside-in` каждая метрика ОБЯЗАНА выйти в Stress-Test Hypothesis Register: диапазон + статус (`ACTIVE / PLAUSIBLE / DORMANT`) + «какие L1-данные открывают метрику». Точная цифра без первички в outside-in = галлюцинация ложной точности (defect уровня HIGH, см. Quality Bar).
+
+**Канонический формат Stress-Test Hypothesis Register (таблица):**
+
+| Метрика / Гипотеза | Диапазон / Оценка | Статус | Уверенность | Какие L1-данные открывают метрику |
+| :--- | :--- | :--- | :--- | :--- |
+
+- Статусы: `ACTIVE` (сигнал горит), `PLAUSIBLE` (согласуется с картиной), `DORMANT` (нет данных). Подтверждённые артефакты помечаются отдельно («Подтверждено, L4»).
+- Каждая строка — гипотеза с диапазоном, не факт. Финансовые метрики без L1 = `[INSUFFICIENT DATA]`, не точные цифры.
+
+**Cross-Validation Note (обязательно для outside-in аудиторов):** перед отправкой клиенту прогони второй независимый проход (другая модель или чистая сессия) с установкой «раздели факты и гипотезы, убей категоричность». Все снятые ранние тезисы фиксируются в обязательном блоке **Cross-Validation Note** («утверждение X снято кросс-чеком, потому что Y»). Урок GortsUp: тезисы «массовый отвал», «инфобиз», «кассовый разрыв» были сняты кросс-чеком — и именно этот блок превратил агрессивный документ в заслуживающий доверия. Непроверенная агрессия, отправленная клиенту, = HIGH defect.
+
 #### 1. Liquidity, Runway & Financial Leaks (13-Week Cash Flow & TWCF)
 
 - **Net Liquid Runway:** $\text{Runway} = \frac{\text{Cash \& Cash Equivalents} - \text{Restricted Cash}}{\text{Weekly Net Cash Burn}}$.
@@ -195,11 +233,14 @@ When executing a business audit or turnaround plan, the audit MUST evaluate and 
   - _Emergency Threshold:_ **< 0.5** or negative OCF with positive EBITDA → paper profits, uncollected debt, or fake revenue recognition.
 - **Cash Conversion Cycle ($CCC$) & AR Aging:** $CCC = \text{DIO} + \text{DSO} - \text{DPO}$.
   - _Emergency Threshold:_ $\text{AR}_{90+} > 15\%$ of receivables → mandatory bad-debt write-off. $CCC > 90$ days → working capital trapped.
+- **Installment / BNPL Sales (Financing Gate):** рассрочка через банк/BNPL — НЕ дебиторка: `Net_Cash_Realized = Gross_Contract × (1 − MDR) − Provision_for_Churn_Refunds`.
+  - _Thresholds:_ MDR банка на рассрочку 10–18% списывается сразу; при кредите 12 мес на услуге 4 мес — закладывать резерв под регрессные требования банка при оттоке клиента (досрочно расторгли → банк требует возврата средств). Отражать в CCC отдельной строкой, не в plain AR.
 
 #### 2. Profitability & SKU/Client Rationalization (Contribution Margin & ABC/XYZ)
 
 - **Contribution Margin ($CM_1, CM_2$):** $CM_2 = (\text{Revenue} - \text{Direct COGS}) - \text{Direct Variable Selling \& Logistics}$.
   - _Emergency Threshold:_ $CM_2 \le 0$ on any SKU → immediate product delisting or repricing regardless of volume.
+- **Founder Extraction / Tax Tunneling Valve:** в юрисдикциях с оборотным налогом (Армения / СНГ, ИП-режимы) официальная EBITDA не значит ничего: личные расходы собственника, проведённые под видом субподрядов, «консалтинговых fees» или представительских, ОБЯЗАНЫ быть реклассифицированы до любых выводов по марже и runway. Ненормализованная EBITDA = фиктивная точка отчёта.
 - **Tail SKU Margin Share:** Category C SKUs (bottom 50% volume) giving $<5\%$ margin while locking $>30\%$ inventory and $40\%$ warehouse OPEX → mandatory delisting.
 - **Net Customer Margin Post Cost-to-Serve:** Top revenue clients with negative margin post-service costs → immediate contract renegotiation or termination.
 
@@ -240,6 +281,14 @@ When executing a business audit or turnaround plan, the audit MUST evaluate and 
 
 ---
 
+#### 8. Domain Asset Engine Block (Client's Real Moat — GortsUp lesson)
+
+Стандартные линзы смотрят на LMS/CRM/сайт/рекламу. Обязательный блок аудита — выявить **настоящий актив клиента**, который не копируется конкурентами, и построить под него отдельную таблицу метрик (вне зависимости от того, куда «принято» смотреть в отрасли).
+
+- Пример (EdTech, кейс GortsUp): компания продаёт не курсы, а гибрид **Education + Recruiting + Employer Network** → блок Career Placement Engine: Employer Partners Count (активные vs витринные) · Placement Rate Verification (методика «79%») · Employer Concentration Risk · Graduate Outcome Tracking · Recruit Event ROI.
+- Правило: контент копируется, сотрудники переманиваются, сайты переделываются — доверие работодателей/клиентов нарабатывается годами. Найти этот актив и завести его метрики в Hypothesis Register (статус DORMANT до L1).
+- Проверочный вопрос собственнику: «Что из вашего бизнеса конкурент не может скопировать за квартал?»
+
 ### 3. Review Policy
 
 Business-audit quality uses **three layers**:
@@ -257,9 +306,12 @@ Business-audit quality uses **three layers**:
 ```text
 ✓ Business audit [CREATE|UPDATE] vX.Y
   Path:              docs/...
-  Cash Runway:       N weeks (Status: CRITICAL | STABLE | HEALTHY)
-  Primary Constraint: [Identified TOC Bottleneck]
-  Retrenchment:      [N cost cuts / $X working capital liberated]
+  Data Mode:         INSIDE-OUT | OUTSIDE-IN
+  Failure Mode:      NONE | OBSERVABILITY_BLACKOUT
+  Cash Runway:       N weeks (Status: CRITICAL | STABLE | HEALTHY)   [inside-out only]
+                     UNKNOWN — Stress-Test Hypothesis Register        [outside-in]
+  Primary Constraint: [Identified TOC Bottleneck] (hypothesis in outside-in)
+  Retrenchment:      [N cost cuts / X working capital liberated]
   Renewal Priority:  [Top 1-2 RICE-scored initiatives]
   External review:   RECOMMENDED | REQUIRED (major)
   Next:              /speckit.specify (target: primary bottleneck) OR /speckit.business-audit-review
@@ -269,8 +321,14 @@ Business-audit quality uses **three layers**:
 
 ## Quality Bar (Reject Own Draft If)
 
+- Emits precise financial figures (Runway in weeks, CM₂ by SKU, AR aging %, OCF) while in `outside-in` mode — false precision hallucination, reject regardless of narrative quality
+- Declares `HEALTHY / STABLE` status while `DISCOVERY_FAILURE_MODE: OBSERVABILITY_BLACKOUT` is active
+- Counts bank-installment (BNPL) revenue as plain receivables without MDR haircut (10–18%) and churn-refund regress provision
+- Draws margin/runway conclusions from non-normalized EBITDA in turnover-tax jurisdictions (owner extraction not reclassified)
+- **Ships outside-in audit without a Cross-Validation Note** (второй проход не прогнан или снятые тезисы не задокументированы)
+- **Fails to identify the client's real moat/asset** (Domain Asset Engine Block отсутствует или подменён отраслевым шаблоном)
 - Recommends marketing expansion when operational bottlenecks or customer churn are unresolved
-- Lacks a concrete 13-week cash runway analysis
+- Lacks a concrete 13-week cash runway analysis **in inside-out mode** (in outside-in mode — lacks the Stress-Test Hypothesis Register instead)
 - Confuses accounting profit (P&L) with real bank liquidity (Cash Flow)
 - Fails to identify a single primary operational bottleneck (TOC)
 - Suggests new strategic investments before executing basic sanitation/cost-cutting (Retrenchment)

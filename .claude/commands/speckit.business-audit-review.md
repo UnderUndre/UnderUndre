@@ -63,7 +63,7 @@ Same table as `/speckit.review`: `claude` | `codex` | `antigravity` | `gemini` |
 - Document ground truth links/facts with deterministic identifiers (DOI / URL / Case Number) to benchmark against audit claims.
 - Flag any ungrounded claim or Level 3 media quote as `[UNRELIABLE: LEVEL 3]` or `[UNVERIFIED_ASSUMPTION]`.
 
-### 3. Audit Dimensions (Lenses A–K)
+### 3. Audit Dimensions (Lenses A–N)
 
 | ID    | Lens                        | Stress Probes & Mandatory Forensic Checks                                                                                                                                                                                                                                     |
 | :---- | :-------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -79,11 +79,13 @@ Same table as `/speckit.review`: `claude` | `codex` | `antigravity` | `gemini` |
 | **J** | **Pumping-in-Clog Ban**     | Is ad spend or sales expansion proposed while product conversion or fulfillment pipelines are clogged/degrading?                                                                                                                                                              |
 | **K** | **Web Ground Truth**        | Factcheck claims against live web search. Are industry DSO/DIO benchmarks respected?                                                                                                                                                                                          |
 | **L** | **Hydraulic Telemetry**     | Check **Stoll $0.75 Anomaly** (zero-tolerance to billing/bank discrepancies), **SCADA Staleness** (raw logs SLA <=15m vs static BI), **WoT Sink-Faucet Balance** (token inflation/sink balance), and **Sleipner A Non-Linear Stress** (peak shear strain vs linear averages). |
+| **M** | **False Precision & Mode Gate** | Was the audit's **Data Mode declared** (`inside-out` / `outside-in`)? In `outside-in` mode, are ANY precise financial figures emitted (Runway in weeks, CM₂ by SKU, AR aging %, OCF) → CRITICAL false-precision hallucination? In `inside-out` without 90-day bank/ERP artifacts, is `DISCOVERY_FAILURE_MODE: OBSERVABILITY_BLACKOUT` set with HEALTHY/STABLE statuses withheld? Are BNPL/installment receivables haircut for bank MDR (10–18%) and churn-refund regress provision instead of counted as plain AR? Is EBITDA normalized for founder extraction (personal costs as subcontracts) in turnover-tax jurisdictions? |
+| **N** | **Cross-Validation & Domain Asset** | Was a second independent pass run before client delivery? Is the **Cross-Validation Note** present, documenting refuted early claims (что снято кросс-чеком и почему)? Refuted-but-undocumented aggression shipped to client = HIGH. Is the **Domain Asset Engine Block** present (client's real moat with dedicated metrics, e.g. Career Placement Engine для EdTech) — or was the audit подменён отраслевым шаблоном? |
 
 ### 4. Severity Rules
 
-- **CRITICAL**: Dealbreaker. Insolvency risk within ≤30 days, negative contribution margin $CM_2$ subsidized by debt, unaddressed single TOC constraint causing systemic overflow, or false cash runway claims.
-- **HIGH**: Major operational drag, unrecognized bad debt, unaddressed churn leak (>30% OpChurn), or single-source vendor dependency >3 months.
+- **CRITICAL**: Dealbreaker. Insolvency risk within ≤30 days, negative contribution margin $CM_2$ subsidized by debt, unaddressed single TOC constraint causing systemic overflow, false cash runway claims, **precise financial models emitted in outside-in mode (false precision hallucination)**, **HEALTHY/STABLE status declared under OBSERVABILITY_BLACKOUT**.
+- **HIGH**: Major operational drag, unrecognized bad debt, unaddressed churn leak (>30% OpChurn), or single-source vendor dependency >3 months; **BNPL/installment revenue counted as plain AR without MDR/churn-regress haircut**; **non-normalized EBITDA in turnover-tax jurisdictions (founder extraction)**; **undeclared Data Mode**.
 - **MEDIUM**: Suboptimal SKU pricing, minor inventory bloat (DIO > 60d), or minor ZBB overhead leaks.
 - **LOW**: Formatting, cosmetic wording, or minor reporting gaps.
 
@@ -136,7 +138,7 @@ _(Based on live web search benchmarks & bank liquidity audit)_
 4. **[Leak 4]**: ...
 5. **[Leak 5]**: ...
 
-## 4. 📋 Structured Findings (Lenses A–K)
+## 4. 📋 Structured Findings (Lenses A–N)
 
 | ID   | Lens | Severity | Finding                      | Root Cause & Evidence              | Concrete Patch                        |
 | :--- | :--- | :------- | :--------------------------- | :--------------------------------- | :------------------------------------ |
@@ -161,6 +163,8 @@ reviewer: <provider>
 reviewed_at: <ISO>
 audits:
   - <path>
+data_mode: INSIDE-OUT | OUTSIDE-IN | UNDECLARED
+failure_mode: NONE | OBSERVABILITY_BLACKOUT
 critical_count: <N>
 high_count: <N>
 medium_count: <N>
