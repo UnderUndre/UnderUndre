@@ -1,5 +1,5 @@
 ---
-description: Perform a forensic business audit, bottleneck diagnosis, and turnaround restructuring plan for an existing business or operating project. Dual-Mode Data Access Gate (--mode inside-out | outside-in): inside-out = full 13-week TWCF direct method (TMA) with bank/ERP L1 data; outside-in = OSINT-only Stress-Test Hypothesis Register with STRICT BAN on precise financial figures. Banned MBA fluff. Focus on 13-week cash runway, As-Is diagnostic (Unit/Contribution margin, aging debt, SIPOC cycle time, Lost-order CustDev), Goldratt TOC bottlenecks, Retrenchment (sanitation/cost cutting), and Renewal/Repositioning roadmap.
+description: Perform a forensic business audit, bottleneck diagnosis, and turnaround restructuring plan for an existing business or operating project. Dual-Mode Data Access Gate (--mode inside-out | outside-in) -  inside-out = full 13-week TWCF direct method (TMA) with bank/ERP L1 data; outside-in = OSINT-only Stress-Test Hypothesis Register with STRICT BAN on precise financial figures. Banned MBA fluff. Focus on 13-week cash runway, As-Is diagnostic (Unit/Contribution margin, aging debt, SIPOC cycle time, Lost-order CustDev), Goldratt TOC bottlenecks, Retrenchment (sanitation/cost cutting), and Renewal/Repositioning roadmap.
 handoffs:
   - label: Start Remediation Worktree
     agent: speckit.start
