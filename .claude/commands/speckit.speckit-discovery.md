@@ -35,7 +35,7 @@ ultrathink
 ## Goal
 
 Generate a client-facing 3–5 page Forensic SpecKit Discovery Diagnostic Memo ($350–$490 Product 0 Tripwire).
-Operate strictly as a solo practitioner wearing four explicit hats: **Diagnostic Auditor**, **Forensic Process Analyst**, **Systems Architect**, and **Product Discovery Lead**. Писать строго от первого лица единственного числа (**«я»**, а не «мы»).
+Operate strictly as a solo practitioner wearing **five explicit hats**: **Diagnostic Auditor**, **Forensic Process Analyst**, **Systems Architect**, **Product Discovery Lead**, and **Forensic Governance & Counterparty Risk Auditor** (реальность лицензий и франшиз, санкционные/регистрационные/судебные хвосты, концентрация на ключевых лицах, устойчивость к корпоративным конфликтам — обязателен при выходе за чистый SaaS в девелопмент, франшизы, инвест-проекты и производство). Писать строго от первого лица единственного числа (**«я»**, а не «мы»).
 
 Primary Auditor Objective:
 **Not to find a bottleneck. To eliminate incorrect bottlenecks as quickly as possible via subtractive epistemology (Via Negativa).**
@@ -109,6 +109,16 @@ Key Mandates:
 16. **Pre-Mortem Analysis (Klein Protocol):** Assume failure 6–12 months post-delivery. Detail top 3 failure vectors.
 17. **Constraint Relocation Forecast (Goldratt Step 5):** Predict where the bottleneck moves once the primary clog is resolved.
 18. **Reversibility Rating (Bezos Type 1 vs. Type 2):** Classify intervention as `HIGH` (Two-Way Door) or `LOW` (One-Way Door).
+19. **Signal ≠ Diagnosis Separation (Lens N Enforcement):**
+    - Категорически запрещено утверждать наличие дефекта (кассовый разрыв, срыв сроков, мошенничество) на данных L3–L5.
+    - Разрешённая формула: «Наблюдается факт X, который в отрасли обычно коррелирует со сценариями A (здоровый рост), B (дефицит ликвидности) или C (подготовка к сдаче/выходу). Для различения гипотез требуются первичные данные Y».
+20. **Reputational Polarization & SERM Triage:**
+    - Отзывы (Google/Яндекс/Glassdoor/DreamJob) и публичные чёрные списки бывших сотрудников классифицируются строго как L4 OSINT / L3 Heuristic.
+    - Идеальный рейтинг 5.0 признаётся вероятным SERM-куполом (`PROBABLE_SERM_SHIELD` — купирование негатива), а не доказательством идеальности.
+    - Публичные скандалы, судебные иски и чёрные списки персонала переводятся в категорию `INSTITUTIONAL_FRICTION`: ЗАПРЕЩЕНО использовать для обвинений в скаме, ОБЯЗАТЕЛЬНО фиксировать как маркер институционального кризиса и калибровки Change Capacity вниз до 1–2 ( feeding Pre-Mortem matrix).
+21. **Marketing & Yield Claim Escalation Protocol:**
+    - В проектах с привлечением частного капитала (девелопмент, инвест-планы, крипта, франшизы) обязательна ретроспектива обещаний: хронология изменения декларируемой доходности (5% → 8% → 10% → 17%) сопоставляется со сдвигами фактических сроков сдачи (Slippage Dynamics).
+    - Ключевой вопрос аудита: из какого источника финансируются выплаты до ввода объекта в эксплуатацию.
 
 ---
 
@@ -302,6 +312,7 @@ Ingested asynchronously (`--async-intake`) or executed in the first 2 minutes of
 - **Суть реального актива:** [В чём заключается фундамент доверия и незаменимости: регуляторная аккредитация, партнерская сеть, экспертиза Title IV, BPO-сопровождение audits, наработанная годами репутация?]
 - **Защитный барьер от горизонтальных конкурентов:** [Почему универсальные ERP/CRM не могут выбить клиента за один квартал?]
 - **Уязвимость актива к внешнему давлению:** [Какие изменения регулятора, законов или ключевых лиц ставят этот ров под угрозу?]
+- **Governance & Counterparty Telemetry (5-я шапка):** [Реальность лицензий и франшиз (сроки действия, предписания об отзыве); санкционные, регистрационные и судебные хвосты компании; концентрация на ключевых лицах; устойчивость к корпоративным конфликтам и уходу топ-менеджмента со скандалом. Источники: публичные скандалы и чёрные списки = INSTITUTIONAL_FRICTION (см. Mandate 20).]
 
 ---
 
@@ -333,10 +344,19 @@ Ingested asynchronously (`--async-intake`) or executed in the first 2 minutes of
 - **Level 2: Buy COTS SaaS:** [РЕКОМЕНДУЮ / HOLD / ОТКЛОНЕНО]. Готовые инструменты, закрывающие узел без кастомного кода.
 - **Level 3: Deploy Sovereign Bypass / Custom Build:** [СТРОГО ЗАПРЕЩАЮ (HARD LOCKED) / ОДОБРЕНО]. Заблокировано до L1-данных и подтверждения полномочий ЛПР.
 
-### 6.1. Productization Opportunities (Product Discovery Lens)
-- **Стандартизируемые узлы:** [Какие повторяющиеся процессы можно закрыть типовым регламентом или готовым модулем?]
-- **Тиражируемый артефакт:** [Compliance Matrix / Стандартизированный SLA / FOSS-шаблон].
-- **Рыночный потенциал:** [Является ли боль системной для всей ниши или уникальна для клиента?]
+### 6.1. Productization Opportunities (Product Discovery Lens — стандартизированная схема)
+
+```yaml
+productization_opportunities:
+  local_vs_market_pain: "LOCAL | MARKET_WIDE"
+  market_context: "Описание типовой боли отрасли"
+  transferable_artifacts:
+    - name: "Название артефакта"
+      type: "SOP / Compliance Matrix / Handover Pack"
+      solves: "Какую системную проблему снимает"
+```
+
+Правило: пустой или «водянистый» блок (`есть потенциал улучшений`) = defect уровня HIGH на ревью — раздел либо заполнен по схеме, либо явно помечен `NO_TRANSFERABLE_ASSETS` с обоснованием.
 
 ---
 
@@ -354,14 +374,16 @@ verdict: LEVEL_0_DO_NOTHING | LEVEL_1_PROCESS_SOP | LEVEL_2_BUY_SAAS | LEVEL_3_B
 primary_defect: UNVERIFIED | VERIFIED_CLOG
 suspected_primary_constraint: "[NAME_OF_CONSTRAINT]"
 beneficial_owner_verified: true | false | UNVERIFIED
-budget_authority_verified: true | false | DELEGATED | UNVERIFIED
 telemetry_quality: GREEN | YELLOW | RED
 data_mode: OUTSIDE-IN | INSIDE-OUT
 discovery_failure_mode: NONE | NO_AUTHORITY | NO_TELEMETRY | TOXIC_TELEMETRY | HEALTHY_GROWTH_CONFIRMED | CONSTRAINT_DISPROVEN
 commercial_route: PRODUCT_0_ONLY | PRODUCT_1_GOVERNANCE | PRODUCT_2_BUILD_LOCKED | PRODUCT_2_BUILD_ELIGIBLE
-null_hypothesis_active: true | false
+null_hypothesis_active: true   # по умолчанию true, пока H₀ не опровергнута L1-выписками
+null_hypothesis_status: NOT_FALSIFIED | FALSIFIED
 growth_hypothesis_active: true | false
 change_capacity_score: 1-5
+budget_authority_verified: true | false   # никаких UNVERIFIED в булевом поле; нет пруфа подписи >= $5k — строго false
+confidence_class: PLAUSIBLE | ACTIVE | UNCALIBRATED | DORMANT   # запрет «голых» псевдобайесовских процентов без модели потолков
 economic_buyer_aligned: true | false
 blindfold_check: PASS | FAIL
 evidence_class:
